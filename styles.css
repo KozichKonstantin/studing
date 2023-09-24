@@ -1,0 +1,68 @@
+body, .top, .mainOut, .mainIn, .text, .values {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: antiquewhite;
+}
+.top{
+    height: 150px;
+    width: 100%;
+    background-color: blueviolet;
+}
+.top  > h1{
+    color: white;
+    font-size: 25px;
+}
+.mainIn{
+    height: 25%;
+    width: 100%;
+}
+.values{
+    flex-direction: row;
+    height: 100%;
+}
+.valueName, .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.valueName > h2, .name, .age {
+    height: 50px;
+    margin-bottom: 10px;
+}
+.name, .age{
+    width: 300px;
+    font-size: 20px;
+}
+.getInfo, .sendInfo{
+    width: 90px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 15px;
+}
+
+.mainOut{
+    justify-content: start;
+    height: calc(75% - 75px);
+    width: 100%;
+}
+.output{
+    width: 700px;
+    height: 80px;
+    font-size: 30px;
+    line-height: 35px;
+    color:white;
+    border-color: rgb(255, 0, 0);
+    /* border: 5px; */
+    background-color: black;
+}
