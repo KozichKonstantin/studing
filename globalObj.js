@@ -9,7 +9,7 @@ const methodsProt ={
 const objProt = {
     __proto__: methodsProt,
     'id': '52',
-    'class': 'bard',
+    'class': 'barbarian',
     'specs': [1, 2, 3, 4, 5, 6],
     'img':  '/1'
 }

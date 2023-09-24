@@ -20,7 +20,7 @@ body{
     font-size: 25px;
 }
 .mainIn{
-    height: 25%;
+    height: 35%;
     width: 100%;
 }
 .values{
@@ -35,9 +35,12 @@ body{
     margin-left: 10px;
     margin-right: 10px;
 }
-.valueName > h2, .name, .age {
-    height: 50px;
+.valueName > h3, .name, .age  {
+    height: 30px;
     margin-bottom: 10px;
+}
+.valueName > h3 {
+    margin-top: 5px;
 }
 .name, .age{
     width: 300px;
@@ -53,12 +56,13 @@ body{
 
 .mainOut{
     justify-content: start;
-    height: calc(75% - 75px);
+    height: calc(65% - 75px);
     width: 100%;
 }
 .output{
     width: 700px;
     height: 80px;
+    margin-top: 15px;
     font-size: 30px;
     line-height: 35px;
     color:white;
