@@ -8,14 +8,12 @@ function clicks (){
                 let stop = kits.kat.sound.pause();
                 kits.kat = kittyCreate(i);
                 let sound = kits.kat.sound.play();
-                return sound && setTimeout(stop, 1000);
+                return sound ;
             }else{
-            kits.kat = kittyCreate(i);
-            
-            let sound = kits.kat.sound.play();
-            return sound && setTimeout(stop, 1000);
+                kits.kat = kittyCreate(i);
+                let sound = kits.kat.sound.play();
+                return sound;
             }
-            
         })
     }
 }
