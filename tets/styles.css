@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.top{
+    height: 100px;
+    background-color: rgb(49, 49, 49);
+}
+.text > h1{
+    color: azure;
+}
+.top, .main, .info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+.main{
+    height: 100%;
+    background-color: black;
+}
+.info{
+    flex-direction: column;
+    height: 100%;
+}
+.intaractive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    align-items: center;
+    
+}
+.high{
+    height: 40%;
+}
+.inp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(56, 126, 128);
+    width: 70%;
+    height: 220px;
+    margin-top: 50px;
+    border-radius: 30px 30px 0px 0px;
+}
+.inp > h2{
+    margin: 0;
+}
+.inp > .into {
+    height: 40px;
+    width: 250px;
+    margin-top: 5px;
+}
+.inp > .work {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(152, 129, 174);
+    border-radius: 10px;
+}
+.arrows{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 60px;
+    margin-top: -1px;
+    background-color: rgb(96, 127, 128);
+    border-radius: 0px 0px 30px 30px;
+}
+.arrows > input{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(96, 127, 128);
+    font-size: 30px;
+    border: solid;
+    border-color: rgb(152, 129, 174);
+}
+.left {
+    border-radius: 0px 0px 0px 30px;
+}
+.right {
+    border-radius: 0px 0px 30px 0px;
+}
+.buttom{
+    height: 50%;
+}
+.output{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.output > textarea{
+    width: 70%;
+    height: 350px;
+    margin-top: -100px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
