@@ -8,6 +8,6 @@ function check(){
 function settings (name, password, button){
     let choosed = button.value;
     let person = new Access(name, password, choosed);
-    output(person.showAll());
+    output(person.showAll(), 'settings');
     output(person.validate());
 }
