@@ -121,19 +121,45 @@ header{
     border-radius: 70px;
 }
 .sportPicture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90px;
     height: 90px;
     margin-left: 20px;
     border-radius: 50%;
     background-color: aqua;
+    border: solid rgb(237, 169, 249, 0.4);
+}
+.sportPicture > img {
+    width: 70%;
+    height: 70%;
 }
 .sportDescription{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 90px;
     margin-left: 10px;
     background-color: azure;
     border-radius: 0px 30px 30px 0px;
+}
+.taskText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+    border: solid 2px rgb(237, 169, 249, 0.4);
+}
+.top{
+    border-radius: 0px 30px 0px 0px;
+}
+.bot{
+    border-radius: 0px 0px 30px 0px;
 }
 .statsPlate{
     display: flex;
@@ -160,12 +186,46 @@ header{
     border-radius: 0px 30px 30px 0px;
 }
 .graph{
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: start;
+    align-items: end;
     width: 78%;
+    height: 100%;
 }
-
+.column{
+    width: 30px;
+    margin-left: 10px;
+    background-color: rgb(254, 117, 117);
+}
+.col1{
+    height: 150px;
+}
+.col2{
+    height: 250px;
+}
+.col3{
+    height: 100px;
+}
 .statsNums{
     height: 32.4%;
     width: 90%;
     background-color: rgb(236, 232, 117);
     border-radius: 50px;
+}
+.addNewStats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.addWeight{
+    width: 200px;
+    height: 30px;
+}
+.submit{
+    width: 50px;
+    height: 30px;
+    margin-left: 20px;
 }
