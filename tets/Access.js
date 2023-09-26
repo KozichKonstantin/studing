@@ -4,6 +4,6 @@ class Access extends User{
         this.allow = allow;
     }
     showAll(){
-        return ( this.allow + ' ' + this.username + ' ' + this.password)
+        return ( this.allow + ' ' + this.username + ' ' + this.password);
     }
 }

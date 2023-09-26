@@ -4,9 +4,12 @@ class User {
         this.password = password;
     }
     validate() {
-        if (this.password > 6) {
+        if (this.password.length > 6) {
             return true;
         }else{
+            if(this.password.length == 0){
+                return 'error, no password';
+            }
             return false;
         }
     }

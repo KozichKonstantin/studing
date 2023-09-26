@@ -42,7 +42,9 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(56, 126, 128);
-    width: 70%;
+    border: solid 5px;
+    border-color: rgb(152, 129, 174);
+    width: calc(70% - 10px);
     height: 220px;
     margin-top: 50px;
     border-radius: 30px 30px 0px 0px;
@@ -54,6 +56,7 @@ body{
     height: 40px;
     width: 250px;
     margin-top: 5px;
+    border-radius: 10px;
 }
 .inp > .work {
     width: 100px;
@@ -68,13 +71,13 @@ body{
     width: 70%;
     height: 60px;
     margin-top: -1px;
-    background-color: rgb(96, 127, 128);
+    background-color: rgb(56, 126, 128);
     border-radius: 0px 0px 30px 30px;
 }
 .arrows > input{
     width: 50%;
     height: 100%;
-    background-color: rgb(96, 127, 128);
+    background-color:rgb(56, 126, 128);
     font-size: 30px;
     border: solid;
     border-color: rgb(152, 129, 174);
@@ -100,7 +103,7 @@ body{
     height: 350px;
     margin-top: -100px;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 15px;
     background-color: black;
     color: white;
 }
