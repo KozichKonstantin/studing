@@ -204,19 +204,39 @@ header{
     background-color: rgb(236, 232, 117);
     border-radius: 50px;
 }
+.statsNums > h3{
+    margin-top: 30px;
+    margin-left: 10px;
+}
 .addNewStats{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-left: 15px;
+    width: 100%;
+    height: 100%;
+    /* margin-top: 40px */
+}
+.addWeight{
+    
+    background-color: whitesmoke;
+    border: solid rgb(254, 117, 117) 2px;
+    border-radius: 15px;
+    width: 70px;
+    height: 50px;
+    ;
+    /* text-justify: ; */
+    text-align: center;
+    font-size: 25px;
+}
+.submit{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-.addWeight{
-    width: 200px;
-    height: 30px;
-}
-.submit{
     width: 50px;
     height: 30px;
     margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(254, 117, 117);
 }
