@@ -1,6 +1,10 @@
 document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
-    let collumns = document.getElementsByClassName('column').length
-    let weight = document.getElementsByClassName('addWeight')[0].value
+    let collumns = document.getElementsByClassName('column').length;
+    let weight = document.getElementsByClassName('addWeight')[0].value;
+    let stoper = 13;
     addCollumn(weight, collumns);
-    deleteOld(collumns)
+    deleteOld(collumns, stoper)
+    collumns = document.getElementsByClassName('column').length;
+    editAppend(collumns)
+    
 })

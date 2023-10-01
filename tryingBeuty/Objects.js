@@ -1,7 +1,7 @@
 let currUser = {
     __prototype__ : User,
     'age' : '',
-    'weight' : '',
+    'sex' : '',
     'tall' : ''
 }
 let coll = {
