@@ -1,0 +1,55 @@
+.glassPlates,
+.username,
+.username > h2,
+.info,
+.infoContent,
+.usersInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.glassPlates{
+    flex-direction: column;
+}
+.username {
+    width: 100%;
+    height: 15%;
+    margin-top: 25px;
+}
+.username > h2{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(220, 182, 255);
+    border-radius: 20px;
+    font-size: 35px;
+}
+.info{
+    width: 100%;
+    height: 85%;
+}
+.infoContent{
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+}
+.usersInfo{
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    margin-top: 10px;
+    background-color: rgb(205, 255, 173);
+    border-radius: 15px;
+}
+.usersInfo > p{
+    font-size: 20px;
+    margin-top: -10px;
+}
+.usersInfo > input{
+    width: 300px;
+    height: 50px;
+    margin-top: -10px;
+    text-align: center;
+    border-radius: 30px;
+    border: solid, 3px;
+    border-color: rgb(220, 182, 255);
+}
