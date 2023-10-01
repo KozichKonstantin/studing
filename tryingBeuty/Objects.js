@@ -4,3 +4,6 @@ let currUser = {
     'weight' : '',
     'tall' : ''
 }
+let coll = {
+    __prototype__ : Collumn
+}

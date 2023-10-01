@@ -4,3 +4,10 @@ class User {
         User.password = password
     }
 }
+class Collumn {
+    constructor (number, weight, modifier){
+        Collumn.number = number
+        Collumn.weight = weight
+        Collumn.modifier = modifier
+    }
+}

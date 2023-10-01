@@ -3,10 +3,9 @@ function addCollumn (weight, collumns){
     const createdType = document.createElement('div');
     createdType.className = (`column col${collumns +1}`);
     createdType.setAttribute('name', `${weight}`);
+    editAppend(collumns, weight);
     if(collumns>0){
-        let firstCollumn = document.getElementsByClassName('column')[0].getAttribute('name');
-        createdType.style.height = (`${collumnHight-(-editHight(firstCollumn))}px`)
-        // console.log(firstCollumn, 'firstcollumn');
+        createdType.style.height = (`${collumnHight-(-editHight(getMaxHight(collumns, weight)))}px`)
     return document.getElementsByClassName('graph')[0].append(createdType)
     }else{
         let firstCollumn = weight;
@@ -22,7 +21,9 @@ function deleteOld (collumns){
     if (collumns == 13){
         console.log('got it')
         allCollumns[0].remove();
-        editAppend(collumns);
+        getMaxHight(collumns);
+        
+
     }
 }
 function editHight(weight){
@@ -34,21 +35,37 @@ function editHight(weight){
             console.log('+150')
             return 150
         }
-        if (weight>=100){
+        if ((weight>=100)&&(weight < 400)){
             console.log('+50')
             return 50;
         }
-        if (weight>400){
-            console.log('-x')
+        if (weight >= 400){
+            console.log(400 - weight)
             return (400 - weight);
         }
 }
-function editAppend (collumns){
+function editAppend (collumns, next){
     for(let i = 0; i < collumns; i++){
         let allCollumns = document.getElementsByClassName('column');
         let colHight = allCollumns[i].getAttribute('name');
-        let firstColHi = allCollumns[0].getAttribute('name');
-        allCollumns[i].style.height = (`${colHight - (-editHight(firstColHi))}px`)
-        
+        allCollumns[i].style.height = (`${colHight - (-editHight(getMaxHight(collumns, next)))}px`)
     }
+}
+function getMaxHight (collumns, next){
+    let allHights = [];
+    let maxHight = 0;
+    let allCollumns = document.getElementsByClassName('column');
+    for (let i =0; i < collumns; i++){
+        allHights.push(allCollumns[i].getAttribute('name'));
+    }
+    allHights.push(next);
+    console.log (allHights)
+    for(let i =0; i < allHights.length; i++){
+        console.log(maxHight, '>', allHights[i-1])
+        if (maxHight < allHights[i]){
+            maxHight = allHights[i];
+            
+        } 
+    }
+    return maxHight
 }
