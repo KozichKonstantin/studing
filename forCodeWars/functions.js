@@ -24,3 +24,8 @@ function spinWords(string){
     return finalsentense;
   }
   
+
+
+const ctrlC = new Input() 
+ctrlC.value = ('')
+output(ctrlC.value, 'ctrlC')
