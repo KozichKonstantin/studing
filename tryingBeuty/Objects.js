@@ -4,6 +4,3 @@ let currUser = {
     'sex' : '',
     'tall' : ''
 }
-let coll = {
-    __prototype__ : Collumn
-}
