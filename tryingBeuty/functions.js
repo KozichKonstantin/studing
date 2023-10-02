@@ -3,7 +3,7 @@ function addCollumn (weight, collumns){
     createdType.className = (`column col${collumns +1}`);
     createdType.setAttribute('name', `${weight}`);
     createdType.style.height = (`${400 * editHight(weight, collumns)}px`)
-    document.getElementsByClassName('graph')[0].append(createdType)
+    document.getElementsByClassName('collumsContent')[0].append(createdType)
     
 }
 function editHight(weight, collumns){
@@ -29,7 +29,12 @@ function getMaxHight (collumns, next){
     collMassive.sort(compareNumbers);
     return collMassive[collMassive.length-1];
 }
-
+function addDate(date, collumns){
+    const createdDate = document.createElement('p');
+    createdDate.className = (`date col${collumns+1}`);
+    createdDate.textContent = `${date}`;
+    document.getElementsByClassName('datesContent')[0].append(createdDate)
+}
 /* global */
 
 function editAppend(collumns){

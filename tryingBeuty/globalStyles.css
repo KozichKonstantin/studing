@@ -18,6 +18,9 @@ header{
     justify-content: center;
     align-items: center;
 }
+.user > a{
+    text-decoration: none;
+}
 .frame{
     display: flex;
     align-items: center;
@@ -36,7 +39,7 @@ header{
     border-radius: 30px;
     background-color: white;
 }
-.headContent{
+.headContent {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,7 +51,8 @@ header{
     width: 10%;
     height: 100%;
 }
-.logo{
+
+.logo {
     /* width: 10%; */
     height: 100%;
 }

@@ -8,6 +8,14 @@
     justify-content: center;
     align-items: center;
 }
+.logo > a{
+    text-decoration: none;
+}
+.logo> a > img {
+    width: 90px;
+    height: 90px;
+    margin-left: calc(-5% - 120px);
+}
 .glassPlates{
     flex-direction: column;
 }
@@ -52,4 +60,5 @@
     border-radius: 30px;
     border: solid, 3px;
     border-color: rgb(220, 182, 255);
+    font-size: 30px;
 }
