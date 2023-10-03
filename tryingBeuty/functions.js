@@ -29,12 +29,12 @@ function addCollumn (weight, collumns){
 //     collMassive.sort(compareNumbers);
 //     return collMassive[collMassive.length-1];
 // }
-// function addDate(date, collumns){
-//     const createdDate = document.createElement('p');
-//     createdDate.className = (`date col${collumns+1}`);
-//     createdDate.textContent = `${date}`;
-//     document.getElementsByClassName('datesContent')[0].append(createdDate)
-// }
+function addDate(date, collumns){
+    const createdDate = document.createElement('p');
+    createdDate.className = (`date col${collumns+1}`);
+    createdDate.textContent = `${date}`;
+    document.getElementsByClassName('datesContent')[0].append(createdDate)
+}
 /* global */
 
 // function editAppend(collumns){
@@ -64,4 +64,7 @@ function editAll(objMass){
     for(let i = 0; i < objMass.length; i++){
         collumn[i].style.height = (`${objMass[i].getHight(getMax(objMass.map((col)=>col.weight)))}px`) 
     }
+}
+function returnErr(funcName){
+    return new Error(`${funcName}`)
 }

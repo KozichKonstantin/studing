@@ -13,9 +13,9 @@ class Collumn {
     set weight(weight){
         if(weight > 0){
             this._weight = weight;
-        }else{
-            return console.error('error, weight is not number')
         }
+        weight<0 ? this._weight = -(weight): returnErr('setWeight');
+        
     }
     set number(number){
         if(number >=0){
