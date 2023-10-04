@@ -47,10 +47,16 @@ function builder(){
 }
 
 function buildNavigation(){
-    const navigation = document.createElement('div');
+    let navigation = document.createElement('div');
     navigation.className = 'navCase';    
     document.getElementsByClassName('navigation')[0].append(navigation);
     document.getElementsByClassName('navigation')[0].setAttribute('name', 'added');
+    for(let i = 0; i < 4; i++){
+        console.log('append')
+        navigation = document.createElement('div');
+        navigation.className = 'button';
+        document.getElementsByClassName('navCase')[0].append(navigation);
+    }
 }
 function deleteNavigation(){
     document.getElementsByClassName('navigation')[0].setAttribute('name', 'deleted')
