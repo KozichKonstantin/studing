@@ -20,4 +20,7 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     }
     editAll(objMass);
 })
-
+document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
+    console.log('navigation clicked')
+    builder();
+})

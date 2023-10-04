@@ -36,3 +36,27 @@ function editAll(objMass){
 function returnErr(funcName){
     return new Error(`${funcName}`)
 }
+
+
+/**
+ * 
+ */
+function builder(){
+    let name  = document.getElementsByClassName('navigation')[0].getAttribute('name');
+    name != 'added' ? buildNavigation() : deleteNavigation();
+}
+
+function buildNavigation(){
+    const navigation = document.createElement('div');
+    navigation.className = 'navCase';    
+    document.getElementsByClassName('navigation')[0].append(navigation);
+    document.getElementsByClassName('navigation')[0].setAttribute('name', 'added');
+}
+function deleteNavigation(){
+    document.getElementsByClassName('navigation')[0].setAttribute('name', 'deleted')
+    function del(){
+        document.getElementsByClassName('navCase')[0].remove();
+    }
+    setTimeout(del, 450)
+    
+}
