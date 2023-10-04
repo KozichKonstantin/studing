@@ -18,7 +18,6 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     if(objMass.length == stoper){
         objMass=objMass.slice(1)
     }
-    
     editAll(objMass);
 })
 
