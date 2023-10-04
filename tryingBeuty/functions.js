@@ -1,25 +1,28 @@
-function addCollumn (weight, collumns){
+function addCollumn (weight){
     const createdType = document.createElement('div');
-    console.log(collumns)
     createdType.className = (`column`);
     createdType.setAttribute('name', `${weight}`);
     createdType.style.height = (`${weight}px`)
     document.getElementsByClassName('collumsContent')[0].append(createdType)
     
 }
-function addDate(date, collumns){
-    console.log(collumns, ' addDate col');
+function addDate(date){
     const createdDate = document.createElement('p');
     createdDate.className = (`date`);
     createdDate.textContent = `${date}`;
     document.getElementsByClassName('datesContent')[0].append(createdDate)
+}
+function addWeight(weight){
+    const collumns = document.getElementsByClassName('column');
+    for(let i = 0; i < collumns.length; i++){
+        collumns[i].textContent = weight[i];
+    }
 }
 /* global */
 function deleteOld (collumns, stoper){
     const allCollumns = document.querySelectorAll('.column');
     const allDates = document.querySelectorAll('.date');
     if (collumns == stoper){
-        console.log(allCollumns[0].classList)
         allCollumns[0].remove();
         allDates[0].remove();
     }

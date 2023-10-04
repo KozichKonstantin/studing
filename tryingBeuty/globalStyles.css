@@ -6,6 +6,14 @@
     --task-color: rgb(136, 255, 255);
     --opacity-bg-color: rgba(255, 205, 237, 0.785);
 }
+@font-face {
+	font-family: 'Days';
+	src: url('./images/fonts/days.ttf')
+}
+@font-face {
+	font-family: 'Evgenia Deco';
+	src: url('./images/b5c255f6e9a501688e491894ddc0d0f0/fonts/evgenia_deco.ttf'); /* IE 9 Compatibility Mode */
+}
 body{
     width: 100%;
     height: 100%;
@@ -20,6 +28,7 @@ body{
 header{
     width: 100%;
     height: 120px;
+    
 }
 .user, .logo, .main, .statsGraphs{
     display: flex;
@@ -28,6 +37,8 @@ header{
 }
 .user > a{
     text-decoration: none;
+    font-family: 'Days';
+    color: black;
 }
 .frame{
     display: flex;
@@ -48,6 +59,7 @@ header{
     background-color: white;
 }
 .headContent {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,6 +75,7 @@ header{
 .logo {
     /* width: 10%; */
     height: 100%;
+    margin-right: 15px;
 }
 .logo > img {
     width: 90px;

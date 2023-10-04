@@ -10,10 +10,10 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     coll.weight = (weight-1+1);
     coll.date = date;
     coll.number = collumns.length++;
-    console.log(coll.number)
-    addCollumn(coll.weight, collumns.length);
-    addDate(coll.date, collumns.length)
+    addCollumn(coll.weight);
+    addDate(coll.date)
     objMass.push(coll);
+    addWeight(objMass.slice(-14).map((obj)=>obj.weight))
     let stoper = 14;
     deleteOld(collumns.length, stoper);
     if(objMass.length == stoper){
@@ -22,6 +22,5 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     editAll(objMass);
 })
 document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
-    console.log('navigation clicked')
     builder();
 })
