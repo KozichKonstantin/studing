@@ -69,3 +69,4 @@ function deleteNavigation(){
     }
     setTimeout(del, 450);
 }
+
