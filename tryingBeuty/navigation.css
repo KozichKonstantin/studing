@@ -1,35 +1,38 @@
 .navigation{
+    /* position: relative; */
+    z-index: 1;
+    overflow: hidden;
     display: flex;
     align-items: start;
-    height: 82%;
+    height: 80%;
     width: 15%;
-    margin-top: -200px;
+    margin-top: -180px;
     margin-left: 50px;
     margin-right: -300px;
-    overflow: hidden;
+    
 }
 [name = 'added']{
     
-    animation: append 0.5s;
+    animation: open 0.5s;
     
 }
-@keyframes append{
+@keyframes open{
     0%{
-        transform:translateX(150%);
+        transform:translateX(-150%);
     }
     100%{
         transform: translateX(0);
     }
 }
 [name = 'deleted']{
-    animation: delete 0.5s ;   
+    animation: close 0.5s ;   
 }
-@keyframes delete{
+@keyframes close{
     0%{
         transform: translateX(0);
     }
     100%{
-        transform:translateX(150%);
+        transform:translateX(-150%);
     }
 }
 .navCase{
@@ -39,16 +42,16 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgb(87, 255, 241, 0.5);
+    background-color: var(--opacity-bg-color);
     border-radius: 80px;
-    padding: 10px;
+    /* padding; */
 
 }
 .button{
     width: 80%;
-    height: 150px;
-    background-color: rgb(254, 117, 117);
-    border-radius: 15px;
+    height: 120px;
+    background-color: var(--main-intaractive-color);
+    border-radius: 20px;
     transition: 1s ease;
     /* margin-top: 70px; */
     /* margin-bottom: 70px; */

@@ -45,7 +45,7 @@
     width: 90%;
     height: 100%;
     margin-top: 10px;
-    background-color: rgb(205, 255, 173);
+    /* background-color: var(--main-bg-color); */
     border-radius: 15px;
 }
 .usersInfo > p{
