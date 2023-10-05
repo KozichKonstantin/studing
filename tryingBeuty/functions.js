@@ -72,3 +72,13 @@ function deleteNavigation(){
     }
     setTimeout(del, 450);
 }
+/***
+ * 
+ * 
+ */
+function graphClass(action){
+    let graph = document.getElementsByClassName('graph')[0];
+    let classes = graph.classList;
+    console.log(classes.length)
+    classes.length == 2 ? graph.classList.remove(classes[1]) : graph.classList.add(action)
+}
