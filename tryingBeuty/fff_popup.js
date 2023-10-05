@@ -9,6 +9,7 @@ for(let i=0;i < btn_pop.length; i++){
 function open(){
     popup[0].classList.add('pop_active');
     shadow_pop[0].classList.add('shadow_pop_active');
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 };
 
 document.getElementsByClassName('close_pop')[0].addEventListener('click', ()=>{
@@ -27,5 +28,6 @@ shadow_pop[0].addEventListener('click', ()=>{
 function close() {
     popup[0].classList.remove('pop_active');
     shadow_pop[0].classList.remove('shadow_pop_active');
+    document.getElementsByTagName('body')[0].style.removeProperty('overflow');
 }
 
