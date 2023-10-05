@@ -1,4 +1,5 @@
 let objMass = [];
+let allObjMass = [];
 document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     let collumns = document.getElementsByClassName('column');
     let weight = document.getElementsByClassName('addWeight')[0].value;
@@ -13,6 +14,9 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     addCollumn(coll.weight);
     addDate(coll.date)
     objMass.push(coll);
+    allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
+    console.log(objMass.map((elem)=>elem.showAll('number','' ,'date')));
+    objMass.length == 5 ? console.log(objMass) : console.log('Wait')
     addWeight(objMass.slice(-14).map((obj)=>obj.weight))
     let stoper = 14;
     deleteOld(collumns.length, stoper);
