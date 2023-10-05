@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 .close_pop:hover{
-    animation: rotates 0.25s;
+    animation: rotates 0.25s infinite;
 }
 
 
@@ -36,12 +36,14 @@
 .popGlass{
     z-index: 10;
     position: absolute;
-    display: flex;
     width: 100%;
     height: 100%;
     border-radius: 30px;
     background-color: var(--main-bg-color);
     border: 5px solid rgba(189, 255, 244, 0.4);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 .popup{
@@ -76,4 +78,15 @@
     z-index: 99;
     opacity: 1;
     left: 0;
+}
+
+.btn_submit{
+    height: 5%;
+    width: 10%;
+    border-radius: 5px;
+    border-color: #c59c9c9f;
+}
+
+.pop_text{
+    margin-top: 25px;
 }
