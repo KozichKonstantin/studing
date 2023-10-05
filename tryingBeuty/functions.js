@@ -88,11 +88,11 @@ function graphClass(action){
 }
 function cleanCollumns(){
     let colls = document.querySelectorAll('.column');
-    let dates = document.querySelectorAll('.date')
+    let dates = document.querySelectorAll('.datesContent');
     // console.log(colls);
     for (let i = colls.length-1; i >= 0; i--){
         colls[i].remove();
     }
-    dates.forEach((date)=> date.remove())
+    dates.forEach((date)=> date.style.display = 'none')
     return console.log('removed');
 }

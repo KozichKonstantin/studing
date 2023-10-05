@@ -24,6 +24,8 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
         objMass=objMass.slice(1)
     }
     editAll(objMass);
+    delCanvas();
+    buidGraf();
 })
 document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
     builder();
@@ -34,6 +36,7 @@ document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
 /***
  * 
  */
+
 document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
     // const grafh = document.getElementsByClassName('graph')[0];
     graphClass('leftGr');
@@ -41,5 +44,7 @@ document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
 })
 document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
     // const grafh = document.getElementsByClassName('graph')[0];
+    delCanvas();
     graphClass('rightGr');
+    document.querySelector('.datesContent').style.display = 'flex';
 })

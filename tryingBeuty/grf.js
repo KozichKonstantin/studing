@@ -3,10 +3,10 @@ function buidGraf(){
     console.log(place);
     create_canv(place);
 }
-
 function create_canv(place){
+    
     let canvas = document.createElement('canvas');
-    canvas.className = 'canvas';    
+    canvas.className = 'canvasBlock';    
     place.append(canvas);
     create_graph(canvas);
 }
@@ -45,4 +45,12 @@ function create_graph(canvas){
           }
         }
       });
+}
+function delCanvas (){
+    try{
+        document.getElementsByClassName('canvasBlock')[0].remove();
+    }
+    catch(error){
+        // console.error('error:228 Polzovatel dolboeb')
+    }
 }
