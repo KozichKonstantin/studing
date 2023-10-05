@@ -78,11 +78,14 @@ function deleteNavigation(){
 function graphClass(action){
     let graph = document.getElementsByClassName('graph')[0];
     let classes = graph.classList;
+    let allButtons = document.querySelectorAll('.arrow')
+    let button = document.getElementsByClassName(`arrow ${action.slice(0,-2)}`)[0]
     if(classes[1]==action){
         return 0;
     }
-    console.log(classes.length);
-    classes.length == 2 ? (graph.classList.remove(classes[1]), graph.setAttribute('name', 'basic')) : (graph.classList.add(action), graph.removeAttribute('name'), cleanCollumns())
+    console.log(allButtons);
+    classes.length == 2 ? (graph.classList.remove(classes[1]), graph.setAttribute('name', 'basic')) : (graph.classList.add(action), graph.removeAttribute('name'), cleanCollumns());
+    classes.length == 2 ? ( button.style.pointerEvents = 'none'): ( allButtons.forEach((arr)=> arr.style.pointerEvents = 'auto', console.log('koko')));
 }
 function cleanCollumns(){
     let colls = document.querySelectorAll('.column');
