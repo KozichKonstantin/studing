@@ -83,15 +83,16 @@ function graphClass(action){
     if(classes[1]==action){
         return 0;
     }
-    console.log(allButtons);
     classes.length == 2 ? (graph.classList.remove(classes[1]), graph.setAttribute('name', 'basic')) : (graph.classList.add(action), graph.removeAttribute('name'), cleanCollumns());
     classes.length == 2 ? ( button.style.pointerEvents = 'none'): ( allButtons.forEach((arr)=> arr.style.pointerEvents = 'auto', console.log('koko')));
 }
 function cleanCollumns(){
     let colls = document.querySelectorAll('.column');
-    console.log(colls);
+    let dates = document.querySelectorAll('.date')
+    // console.log(colls);
     for (let i = colls.length-1; i >= 0; i--){
         colls[i].remove();
     }
+    dates.forEach((date)=> date.remove())
     return console.log('removed');
 }
