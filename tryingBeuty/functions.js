@@ -2,15 +2,17 @@ function addCollumn (weight){
     const createdType = document.createElement('div');
     createdType.className = (`column`);
     createdType.setAttribute('name', `${weight}`);
-    createdType.style.height = (`${weight}px`)
-    document.getElementsByClassName('collumsContent')[0].append(createdType)
-    
+    createdType.style.height = (`${weight}px`);
+    try{document.getElementsByName('basic')[0].childNodes[1].append(createdType);}
+    catch(error){
+        console.log('empty childNodes')
+    }
 }
 function addDate(date){
     const createdDate = document.createElement('p');
     createdDate.className = (`date`);
     createdDate.textContent = `${date}`;
-    document.getElementsByClassName('datesContent')[0].append(createdDate)
+    document.getElementsByClassName('datesContent')[0].append(createdDate);
 }
 function addWeight(weight){
     const collumns = document.getElementsByClassName('column');
@@ -36,9 +38,12 @@ function getMax(arr){
     return arr[arr.length-1];
 }
 function editAll(objMass){
-    let collumn = document.getElementsByClassName('column');
+    try{let collumn = document.getElementsByClassName('column');
     for(let i = 0; i < objMass.length; i++){
         collumn[i].style.height = (`${objMass[i].getHight(getMax(objMass.map((col)=>col.weight)))}px`) 
+    }}
+    catch(error){
+        console.log('no collumns')
     }
 }
 function returnErr(funcName){
@@ -79,6 +84,17 @@ function deleteNavigation(){
 function graphClass(action){
     let graph = document.getElementsByClassName('graph')[0];
     let classes = graph.classList;
-    console.log(classes.length)
-    classes.length == 2 ? graph.classList.remove(classes[1]) : graph.classList.add(action)
+    if(classes[1]==action){
+        return 0;
+    }
+    console.log(classes.length);
+    classes.length == 2 ? (graph.classList.remove(classes[1]), graph.setAttribute('name', 'basic')) : (graph.classList.add(action), graph.removeAttribute('name'), cleanCollumns())
+}
+function cleanCollumns(){
+    let colls = document.querySelectorAll('.column');
+    console.log(colls);
+    for (let i = colls.length-1; i >= 0; i--){
+        colls[i].remove();
+    }
+    return console.log('removed');
 }
