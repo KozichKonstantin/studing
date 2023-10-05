@@ -15,7 +15,7 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     addDate(coll.date)
     objMass.push(coll);
     allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
-    console.log(objMass.map((elem)=>elem.showAll('number','' ,'date')));
+    // console.log(objMass.map((elem)=>elem.showAll()));
     objMass.length == 5 ? console.log(objMass) : console.log('Wait')
     addWeight(objMass.slice(-14).map((obj)=>obj.weight))
     let stoper = 14;
@@ -35,10 +35,11 @@ document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
  * 
  */
 document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
-    const grafh = document.getElementsByClassName('graph')[0];
+    // const grafh = document.getElementsByClassName('graph')[0];
     graphClass('leftGr');
+    buidGraf();
 })
 document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
-    const grafh = document.getElementsByClassName('graph')[0];
+    // const grafh = document.getElementsByClassName('graph')[0];
     graphClass('rightGr');
 })
