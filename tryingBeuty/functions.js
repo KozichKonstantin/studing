@@ -31,11 +31,7 @@ function deleteOld (collumns, stoper){
 }
 /** */
 function getMax(arr){
-    function compareNumbers(a, b){
-        return a-b;
-    }
-    arr.sort(compareNumbers);
-    return arr[arr.length-1];
+    return( max = arr.reduce((max, value) => (value > max ? value : max), 0));
 }
 function editAll(objMass){
     try{let collumn = document.getElementsByClassName('column');
@@ -49,8 +45,6 @@ function editAll(objMass){
 function returnErr(funcName){
     return new Error(`${funcName}`)
 }
-
-
 /**
  * 
  */

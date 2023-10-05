@@ -141,6 +141,14 @@
     width: 78%;
     height: 95%;
 }
+.leftGr{
+    background-color: var(--main-intaractive-color);
+    transition: 1s ease;
+}
+.rightGr{
+    background-color: var(--innerSecond-bg-color);
+    transition: 1s ease;
+}
 .collumsContent{
     display: flex;
     align-items: baseline;
