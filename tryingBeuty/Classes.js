@@ -33,9 +33,7 @@ class Collumn {
     get date(){
         return this._date;
     }
-    showAll(){
-        return (`${this.number}`+' '+`${this.weight}`+' '+`${this.date}`)
-    }
+    
 }
 class CollumnWithF extends Collumn{
     constructor (){
@@ -43,5 +41,13 @@ class CollumnWithF extends Collumn{
     }
     getHight(max){
         return (this.weight/max)*400
+    }
+    showAll(a='', b='', c=''){
+        let answer = '';
+        a=='number' ? answer+= 'number: ' + this.number+ ', ' : answer = answer;
+        b=='weight' ? answer+= 'weight: ' + this.weight+ ', ' : answer = answer;
+        c=='date' ? answer+= 'date: ' + this.date+ ', ' : answer = answer;
+        (a==''&& b=='' && c=='') ? (answer= 'number: ' + this.number+ ', ' + 'weight: ' + this.weight+ ', ' + 'date: ' + this.date + ', ') : answer=answer
+        return (answer.slice(0, -2))
     }
 }

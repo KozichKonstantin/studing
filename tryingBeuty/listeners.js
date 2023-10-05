@@ -1,4 +1,5 @@
 let objMass = [];
+let allObjMass = [];
 document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     let collumns = document.getElementsByClassName('column');
     let weight = document.getElementsByClassName('addWeight')[0].value;
@@ -10,10 +11,13 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     coll.weight = (weight-1+1);
     coll.date = date;
     coll.number = collumns.length++;
-    console.log(coll.number)
-    addCollumn(coll.weight, collumns.length);
-    addDate(coll.date, collumns.length)
+    addCollumn(coll.weight);
+    addDate(coll.date)
     objMass.push(coll);
+    allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
+    // console.log(objMass.map((elem)=>elem.showAll()));
+    objMass.length == 5 ? console.log(objMass) : console.log('Wait')
+    addWeight(objMass.slice(-14).map((obj)=>obj.weight))
     let stoper = 14;
     deleteOld(collumns.length, stoper);
     if(objMass.length == stoper){
@@ -22,6 +26,20 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     editAll(objMass);
 })
 document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
-    console.log('navigation clicked')
     builder();
+})
+
+
+
+/***
+ * 
+ */
+document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
+    // const grafh = document.getElementsByClassName('graph')[0];
+    graphClass('leftGr');
+    buidGraf();
+})
+document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
+    // const grafh = document.getElementsByClassName('graph')[0];
+    graphClass('rightGr');
 })
