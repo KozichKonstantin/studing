@@ -14,6 +14,7 @@ function create_canv(place){
 
 function create_graph(canvas){
   let colorLines = 'rgb(251, 148, 148)';
+  let colorFill = 'rgb(251, 148, 148, 0.3)'
   let colorNums = 'rgb(0,0,0)';
     new Chart(canvas, {
         type: 'line',
@@ -25,7 +26,8 @@ function create_graph(canvas){
             data: allObjMass.map((obj)=>obj.weight),
             borderWidth: 1,
             tension: 0.5,
-            backgroundColor : colorLines,
+            fill: true,
+            backgroundColor : colorFill,
             borderColor: colorLines,
           }]
         },

@@ -1,5 +1,5 @@
 .close_pop{
-    z-index: 999;
+    z-index: 10;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -41,9 +41,13 @@
     border-radius: 30px;
     background-color: var(--main-bg-color);
     border: 5px solid rgba(189, 255, 244, 0.4);
-    display: flex;
+    /* display: flex;
     align-items: flex-end;
+    flex-direction: column; */
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .popup{
@@ -60,6 +64,7 @@
     z-index: 100;
     top: calc(50% - 250px);
     left: calc(50% - 250px);
+    transition: opacity 0.3s ease-in-out;
 }
 
 .shadow_pop{
@@ -70,7 +75,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7); 
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -80,13 +85,32 @@
     left: 0;
 }
 
-.btn_submit{
-    height: 5%;
-    width: 10%;
-    border-radius: 5px;
-    border-color: #c59c9c9f;
-}
 
 .pop_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+.pop_text>p{
+    width: 70%;
+    background-color: var(--innerFirst-bg-color);
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+    font-family: 'Days';
+    /* padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px; */
+}
+.btn_submit{
+    height: 50px;
+    width: 90px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: var(--main-intaractive-color);
+    font-family: 'Days';
+    font-size: 20px;
 }
