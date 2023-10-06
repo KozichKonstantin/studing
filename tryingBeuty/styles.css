@@ -142,8 +142,18 @@
     height: 95%;
 }
 .leftGr{
-    background-color: var(--main-intaractive-color);
+    background-color: rgb(150, 227, 255);
+    border-radius: 30px;
     transition: 1s ease;
+}
+.leftGr > .collumsContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+canvas{
+    /* background-color: rgb(185, 254, 218); */
+    border-radius:15px;
 }
 .rightGr{
     background-color: var(--innerSecond-bg-color);

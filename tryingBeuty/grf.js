@@ -7,11 +7,15 @@ function create_canv(place){
     
     let canvas = document.createElement('canvas');
     canvas.className = 'canvasBlock';    
+    canvas.style.aspectRatio= '1.25/1';
+    canvas.style.height = '360px'
     place.append(canvas);
     create_graph(canvas);
 }
 
 function create_graph(canvas){
+  let colorLines = 'rgb(251, 148, 148)';
+  let colorNums = 'rgb(0,0,0)';
     new Chart(canvas, {
         type: 'line',
         data: {
@@ -21,7 +25,9 @@ function create_graph(canvas){
             label: '' ,
             data: objMass.map((obj)=>obj.weight),
             borderWidth: 1,
-            tension: 0.1,
+            tension: 0.5,
+            backgroundColor : colorLines,
+            borderColor: colorLines,
           }]
         },
         options: {
@@ -32,12 +38,19 @@ function create_graph(canvas){
             },
           scales: {
             y: {
+              ticks: {
+                color: colorNums,
+              },
               beginAtZero: true,
               grid: {
                 display: false,
+
               },
             },
             x: {
+              ticks: {
+                color: colorNums,
+              },
                 grid: {
                   display: false,
                 },
