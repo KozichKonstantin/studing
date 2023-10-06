@@ -1,6 +1,5 @@
 function buidGraf(){
     let place = document.getElementsByClassName('leftGr')[0].childNodes[1];
-    console.log(place);
     create_canv(place);
 }
 function create_canv(place){
@@ -19,11 +18,11 @@ function create_graph(canvas){
     new Chart(canvas, {
         type: 'line',
         data: {
-          labels: objMass.map((obj)=>obj.date),
+          labels: allObjMass.map((obj)=>obj.date),
           
           datasets: [{
             label: '' ,
-            data: objMass.map((obj)=>obj.weight),
+            data: allObjMass.map((obj)=>obj.weight),
             borderWidth: 1,
             tension: 0.5,
             backgroundColor : colorLines,
@@ -41,7 +40,6 @@ function create_graph(canvas){
               ticks: {
                 color: colorNums,
               },
-              beginAtZero: true,
               grid: {
                 display: false,
 
