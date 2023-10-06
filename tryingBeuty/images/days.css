@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Days';
+	src: url('../fonts/days.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/days.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/days.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/days.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/days.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/days.svg#days') format('svg'); /* Chrome < 4, Legacy iOS */
+}
