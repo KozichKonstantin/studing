@@ -1,6 +1,7 @@
 let objMass = [];
 let allObjMass = [];
 document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
+    
     let collumns = document.getElementsByClassName('column');
     let weight = document.getElementsByClassName('addWeight')[0].value;
     if (weight==0){
@@ -41,10 +42,23 @@ document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
     // const grafh = document.getElementsByClassName('graph')[0];
     graphClass('leftGr');
     buidGraf();
+    try{ 
+        objMass.map((elem)=>addCollumn(elem.weight))
+        editAll(objMass);
+        addWeight(objMass.slice(-14).map((obj)=>obj.weight))
+    }
+    catch(error){console.error('alarm')}
 })
 document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
     // const grafh = document.getElementsByClassName('graph')[0];
     delCanvas();
     graphClass('rightGr');
     document.querySelector('.datesContent').style.display = 'flex';
+    try{ 
+        objMass.map((elem)=>addCollumn(elem.weight))
+        editAll(objMass);
+        addWeight(objMass.slice(-14).map((obj)=>obj.weight))
+    }
+    catch(error){console.error('error in redrawing collumns')}
 })
+
