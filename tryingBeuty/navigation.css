@@ -19,9 +19,11 @@
 }
 @keyframes open{
     0%{
+        opacity: 0;
         transform:translateX(-150%);
     }
     100%{
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -30,9 +32,11 @@
 }
 @keyframes close{
     0%{
+        opacity: 1;
         transform: translateX(0);
     }
     100%{
+        opacity: 0;
         transform:translateX(-150%);
     }
 }
@@ -54,7 +58,7 @@
     background-color: var(--opacity-bg-color);
     border-radius: 80px;
     /* padding; */
-    box-shadow:rgba(0, 0, 255, 0.245) 0px 5px 0px 5px;
+    box-shadow:var(--main-shadow-color) 0px 2px 0px 2px;
 }
 .button{
     width: 80%;

@@ -1,10 +1,11 @@
 :root{
-    --main-intaractive-color: rgb(251, 148, 148);
-    --main-bg-color: rgba(171, 240, 228, 0.95);
-    --innerFirst-bg-color: rgb(180, 197, 235);
+    --main-intaractive-color: rgba(252, 174, 174, 0.834);
+    --main-bg-color: rgba(255, 255, 255, 0.3);
+    --innerFirst-bg-color: rgb(211, 223, 249);
     --innerSecond-bg-color: rgba(244, 242, 213, 0.919);
     --task-color: rgb(191, 255, 255);
-    --opacity-bg-color: rgba(255, 205, 237, 0.785);
+    --opacity-bg-color: rgba(174, 255, 225, 0.1);
+    --main-shadow-color: rgba(0, 0, 255, 0.145);
 }
 @font-face {
 	font-family: 'Days';
@@ -107,7 +108,7 @@ header{
     background-color: var(--main-bg-color);
     border: solid 5px;
     border-color: rgb(189, 255, 244, 0.4);
-    box-shadow:rgba(0, 0, 255, 0.245) 0px 5px 0px 5px;
+    box-shadow:rgba(0, 0, 255, 0.145) 0px 2px 0px 2px;
     animation: create 0.5s;
 }
 @keyframes create{
