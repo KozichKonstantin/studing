@@ -6,6 +6,7 @@
     --task-color: rgb(191, 255, 255);
     --opacity-bg-color: rgba(174, 255, 225, 0.1);
     --main-shadow-color: rgba(0, 0, 255, 0.145);
+    --main-border-color: rgb(189, 255, 244, 0.4);
 }
 @font-face {
 	font-family: 'Days';

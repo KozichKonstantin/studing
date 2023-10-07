@@ -39,7 +39,7 @@
     width: 100%;
     height: 100%;
     border-radius: 30px;
-    background-color: var(--main-bg-color);
+    background-color: var(--innerSecond-bg-color);
     border: 5px solid rgba(189, 255, 244, 0.4);
     /* display: flex;
     align-items: flex-end;
@@ -110,7 +110,8 @@
     width: 90px;
     margin-top: 20px;
     border-radius: 15px;
-    background-color: var(--main-intaractive-color);
+    background-color: var(--task-color);
     font-family: 'Days';
     font-size: 20px;
+    border: 2px solid var(--main-intaractive-color);
 }

@@ -25,15 +25,17 @@
     flex-direction: column;
 }
 .username {
-    width: 100%;
+    width: 50%;
     height: 15%;
     margin-top: 25px;
+    background-color: rgb(220, 182, 255);
+    border-radius: 20px;
+    border: var(--main-border-color) 5px;
+    box-shadow: var( --main-shadow-color) 0px 5px;
 }
 .username > h2{
     width: 50%;
     height: 100%;
-    background-color: rgb(220, 182, 255);
-    border-radius: 20px;
     font-size: 30px;
     font-family: 'Days';
 }
@@ -66,7 +68,7 @@
     text-align: center;
     font-family: 'Days';
     border-radius: 30px;
-    border: solid, 3px;
+    border: solid 3px;
     border-color: rgb(220, 182, 255);
     font-size: 20px;
 }
