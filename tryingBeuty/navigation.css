@@ -77,7 +77,8 @@
     border: 2px solid rgb(255, 143, 143);
     background-color: rgb(255, 169, 169);
 }
-@keyframes drawBorder{
+/* кривая хуйня - переделать */
+@keyframes drawBorder{ 
     0%{
         
     }
