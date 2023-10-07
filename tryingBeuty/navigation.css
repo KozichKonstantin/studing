@@ -65,10 +65,23 @@
     height: 120px;
     background-color: var(--main-intaractive-color);
     border-radius: 20px;
-    transition: 1s ease;
+    transition: 0.5s ease;
     /* margin-top: 70px; */
     /* margin-bottom: 70px; */
+    border: 2px solid rgba(0, 0, 0, 0);
 }
 .button:hover{
+    
+    animation: drawBorder 0s;
+    
+    border: 2px solid rgb(255, 143, 143);
     background-color: rgb(255, 169, 169);
+}
+@keyframes drawBorder{
+    0%{
+        
+    }
+    100%{
+        margin: -2px;
+    }
 }
