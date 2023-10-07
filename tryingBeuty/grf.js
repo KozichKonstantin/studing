@@ -39,6 +39,7 @@ function create_graph(canvas){
             },
           scales: {
             y: {
+              beginAtZero: true,
               ticks: {
                 color: colorNums,
               },
@@ -55,8 +56,17 @@ function create_graph(canvas){
                   display: false,
                 },
               },
-          }
-        }
+          },
+          anination: {
+              duration: 1000,
+              easing: 'linear',
+              from: 1,
+              to: 0,
+              loop: true
+              
+          },
+        },
+        
       });
 }
 function delCanvas (){
