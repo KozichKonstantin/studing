@@ -57,6 +57,7 @@
     width: 90%;
     background-color: var(--opacity-bg-color);
     border-radius: 80px;
+    border: 2px solid var(--main-border-color);
     /* padding; */
     box-shadow:var(--main-shadow-color) 0px 2px 0px 2px;
 }
