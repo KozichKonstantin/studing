@@ -5,7 +5,7 @@ const app = express();
 const Port = 3000;
 const mysql = require('mysql');
 const urlencodedParcer = express.urlencodedParcer({extended:false});
-import connection from './connection';
+// import connection from './connection';
 const connect = mysql.createConnection({
     connection
 })

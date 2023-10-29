@@ -1,289 +1,284 @@
-.bigPlate{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 100%;
+.bigPlate {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
 }
-.inputMain, .additionals, .statsGraphs, .statsNums{
-    margin-top: 20px;
-    margin-left: 20px;
+.inputMain,
+.additionals,
+.statsGraphs,
+.statsNums {
+  margin-top: 20px;
+  margin-left: 20px;
 }
-.inputMain{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 30%;
-    background-color: var(--innerSecond-bg-color);
-    border-radius: 30px;
+.inputMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  background-color: var(--innerSecond-bg-color);
+  border-radius: 30px;
 }
-.inputs{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 60px;
-    width: 260px;
-    font-family: 'Days';
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  width: 260px;
+  font-family: "Days";
 }
 .inputs > p {
-    width: 40px;
+  width: 40px;
 }
-.inputs > input{
-    text-align: center;
-    height: 30px;
-    width: 170px;
-    border-radius: 10px;
-    border: none;
+.inputs > input {
+  text-align: center;
+  height: 30px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
 }
-.additionals{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 19%;
-    background-color: var(--innerFirst-bg-color);
-    border-radius: 70px;
+.additionals {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 19%;
+  background-color: var(--innerFirst-bg-color);
+  border-radius: 70px;
 }
-.sportPicture{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90px;
-    height: 90px;
-    margin-left: 20px;
-    border-radius: 50%;
-    background-color: var(--task-color);
-    border: solid rgb(237, 169, 249, 0.4);
+.sportPicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: var(--task-color);
+  border: solid rgb(237, 169, 249, 0.4);
 }
 .sportPicture > img {
-    width: 70%;
-    height: 70%;
+  width: 70%;
+  height: 70%;
 }
-.sportDescription{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 210px;
-    height: 100%;
-    margin-left: 10px;
-    /* background-color: azure; */
-    border-radius: 0px 70px 70px 0px;
+.sportDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 100%;
+  margin-left: 17px;
+  border-radius: 0px 70px 70px 0px;
 }
-.taskText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-family: 'Days';
-    height: 50%;
-    width: 100%;
-    background-color: rgb(256,256,256,0);
-    /* border: solid 2px rgb(237, 169, 249, 0.4); */
-    border: none;
-    transition: 0.5s ease;
+.taskText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-family: "Days";
+  height: 50%;
+  width: 100%;
+  background-color: rgb(256, 256, 256, 0);
+  border: none;
+  transition: 0.5s ease;
 }
-.taskText:hover{
-    background-color: var(--task-color);
+.taskText:hover {
+  background-color: var(--task-color);
 }
-.top{
-    border-radius: 0px 70px 0px 0px;
+.top {
+  width: 100%;
+  border-radius: 0px 70px 0px 0px;
 }
-.bot{
-    border-radius: 0px 0px 70px 0px;
+.bot {
+  border-radius: 0px 0px 70px 0px;
 }
-.statsPlate{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    height: 100%;
+.statsPlate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 100%;
 }
-.statsGraphs{
-    width: 90%;
-    height: 60%;
-    background-color: var(--innerFirst-bg-color);
-    border-radius: 30px;
+.statsGraphs {
+  width: 90%;
+  height: 60%;
+  background-color: var(--innerFirst-bg-color);
+  border-radius: 30px;
 }
-.arrow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 1s ease;
+  width: 90px;
+  height: 100%;
+  background-color: var(--innerSecond-bg-color);
+}
+.left {
+  border-radius: 30px 0px 0px 30px;
+}
+.arrowPic {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+}
+.picTop,
+.picBott {
+  background-color: var(--main-intaractive-color);
+  height: 10px;
+  width: 50px;
+  position: absolute;
+  border-radius: 80px;
+}
+.picTop {
+  top: 38px;
+  transform: rotate(-45deg);
+  transform-origin: center left;
+}
+.picCent {
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+}
+.picBott {
+  top: 32px;
+
+  transform: rotate(45deg);
+  transform-origin: center left;
+}
+.right {
+  border-radius: 0px 30px 30px 0px;
+}
+.right > .arrowPic {
+  transform: rotate(180deg);
+}
+.arrow:hover {
+  opacity: 1;
+}
+.graph {
+  display: flex;
+  flex-direction: column;
+  width: 78%;
+  height: 95%;
+}
+.leftGr {
+  border-radius: 30px;
+  transition: 1s ease;
+}
+.leftGr > .collumsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+canvas {
+  border-radius: 15px;
+}
+.rightGr {
+  background-color: var(--innerSecond-bg-color);
+  transition: 0.2s ease;
+}
+.collumsContent {
+  display: flex;
+  align-items: baseline;
+  margin-top: 20px;
+  width: 100%;
+  height: 90%;
+}
+.column {
+  display: flex;
+  align-self: end;
+  width: 30px;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: var(--main-intaractive-color);
+  height: 0;
+  font-family: "Days";
+  animation: 0.3s append ease-in;
+}
+@keyframes append {
+  from {
+    transform: translateX(-100%);
     opacity: 0;
-    transition: 1s ease;
-    width: 90px;
-    height: 100%;
-    background-color: var(--innerSecond-bg-color);
-}
-.left{
-    border-radius: 30px 0px 0px 30px;
-}
-.arrowPic{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    width: 80px;
-
-}
-.picTop,.picBott{
-    background-color: var(--main-intaractive-color);
-    /* background-color: black; */
-    height: 10px;
-    width: 50px;
-    position: absolute;
-    /* z-index: 12; */
-    border-radius: 80px;
-}
-.picTop{
-    top: 38px;
-    /* right: 10px; */
-    transform: rotate(-45deg);
-    transform-origin: center left;
-}
-.picCent{
-    left: 10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: black;
-    position: absolute;
-}
-.picBott{
-    top: 32px;
-
-    transform: rotate(45deg);
-    transform-origin: center left;
-}
-.right{
-    border-radius: 0px 30px 30px 0px;
-}
-.right >.arrowPic{
-    transform: rotate(180deg);
-}
-.arrow:hover{
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
+  }
 }
-.graph{
-    display: flex;
-    /* justify-content: start; */
-    /* align-items: end; */
-    flex-direction: column;
-    width: 78%;
-    height: 95%;
+.datesContent {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  margin-left: 5px;
 }
-.leftGr{
-    /* background-color: rgb(150, 227, 255); */
-    border-radius: 30px;
-    transition: 1s ease;
+.date {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 13px;
+  font-family: "Days";
+  margin-top: 0;
+  width: 40px;
+  height: 40px;
 }
-.leftGr > .collumsContent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.statsNums {
+  height: 32.4%;
+  width: 90%;
+  background-color: var(--innerSecond-bg-color);
+  border-radius: 50px;
 }
-canvas{
-    /* background-color: rgb(185, 254, 218); */
-    border-radius:15px;
-    /* transition: 0.3s ease-in; */
+.statsNums > h3 {
+  margin-top: 30px;
+  margin-left: 10px;
+  font-family: "Days";
 }
-.rightGr{
-    background-color: var(--innerSecond-bg-color);
-    transition: 0.2s ease;
+.addNewStats {
+  display: flex;
+  margin-left: 15px;
+  width: 100%;
+  height: 100%;
 }
-.collumsContent{
-    display: flex;
-    align-items: baseline;
-    margin-top: 20px;
-    width: 100%;
-    height: 90%;
+.addWeight,
+.addDate {
+  background-color: whitesmoke;
+  border: solid var(--main-intaractive-color) 2px;
+  border-radius: 15px;
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Days";
 }
-.column{
-    display: flex;
-    align-self: end;
-    width: 30px;
-    justify-content: center;
-    margin-left: 10px;
-    background-color: var(--main-intaractive-color);
-    height: 0;
-    font-family: 'Days';
-    animation: 0.3s append ease-in;
+.addDate {
+  height: 50px;
+  width: 200px;
+  margin-left: 20px;
 }
-@keyframes append{
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to{
-        transform:  translateX(0);
-        opacity: 1;
-    }
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--innerFirst-bg-color);
+  background-color: var(--main-intaractive-color);
+  font-family: "Days";
+  transition: 0.5s ease;
 }
-.datesContent{
-    display: flex;
-    width: 100%;
-    height: 10%;
-    margin-left: 5px;
-}
-.date{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-size: 13px;
-    font-family: 'Days';
-    margin-top: 0;
-    width: 40px;
-    height: 40px;
-}
-.statsNums{
-    height: 32.4%;
-    width: 90%;
-    background-color: var(--innerSecond-bg-color);
-    border-radius: 50px;
-}
-.statsNums > h3{
-    margin-top: 30px;
-    margin-left: 10px;
-    font-family: 'Days';
-}
-.addNewStats{
-    display: flex;
-    margin-left: 15px;
-    width: 100%;
-    height: 100%;
-}
-.addWeight, .addDate{
-    background-color: whitesmoke;
-    border: solid var(--main-intaractive-color) 2px;
-    border-radius: 15px;
-    width: 70px;
-    height: 50px;
-    text-align: center;
-    font-size: 25px;
-    font-family: 'Days';
-}
-.addDate{
-    height: 50px;
-    width: 200px;
-    margin-left: 20px;
-}
-.submit{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    border-radius: 50%;
-    border: 3px solid var(--innerFirst-bg-color);
-    background-color: var(--main-intaractive-color);
-    font-family: 'Days';
-    transition: 0.5s ease;
-}
-.submit:hover{
-    background-color: rgb(255, 205, 237);
+.submit:hover {
+  background-color: rgb(255, 205, 237);
 }

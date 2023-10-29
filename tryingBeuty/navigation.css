@@ -1,5 +1,4 @@
 .navigation{
-    /* position: relative; */
     z-index: 1;
     overflow: hidden;
     display: flex;
@@ -40,14 +39,6 @@
         transform:translateX(-150%);
     }
 }
-/* @keyframes close{
-    0%{
-        transform: scaleY(1);
-    }
-    100%{
-        transform:scaleY(0);
-    }
-} */
 .navCase{
     display: flex;
     flex-direction: column;
@@ -58,7 +49,6 @@
     background-color: var(--opacity-bg-color);
     border-radius: 80px;
     border: 2px solid var(--main-border-color);
-    /* padding; */
     box-shadow:var(--main-shadow-color) 0px 2px 0px 2px;
 }
 .button{
@@ -67,8 +57,6 @@
     background-color: var(--main-intaractive-color);
     border-radius: 20px;
     transition: 0.5s ease;
-    /* margin-top: 70px; */
-    /* margin-bottom: 70px; */
     border: 2px solid rgba(0, 0, 0, 0);
 }
 .button:hover{
