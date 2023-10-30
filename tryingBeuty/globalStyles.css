@@ -20,8 +20,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  /* background-image: url(./images/images.png); */
-  /* background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db); */
   background-blend-mode: screen;
   background: linear-gradient(limegreen, transparent),
     linear-gradient(90deg, skyblue, transparent),
@@ -80,7 +78,6 @@ header {
 }
 
 .logo {
-  /* width: 10%; */
   height: 100%;
   margin-right: 15px;
 }

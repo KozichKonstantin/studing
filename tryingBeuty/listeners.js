@@ -42,4 +42,15 @@ document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
 document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
     grClass('rightGr');
 })
-
+let botmass = document.getElementsByClassName('taskText bot');
+for(let i =0; i < 3; i++){
+    botmass[i].addEventListener('mouseover', ()=>{
+        botmass[i].classList.add('bot_active')
+        botmass[i].value= '3000'
+    }
+    )
+    botmass[i].addEventListener('mouseout', ()=>{
+        botmass[i].classList.remove('bot_active')
+        botmass[i].value= 'Exp'
+    })
+}

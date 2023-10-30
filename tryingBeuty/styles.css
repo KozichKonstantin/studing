@@ -95,6 +95,15 @@
 }
 .bot {
   border-radius: 0px 0px 70px 0px;
+  
+}
+.bot_active{
+  transition: 0.5s;
+  /***
+
+  *
+  *
+  /* strange thing */
 }
 .statsPlate {
   display: flex;
