@@ -78,6 +78,10 @@ function buildNavigation() {
     navigation = document.createElement("div");
     navigation.className = "button";
     document.getElementsByClassName("navCase")[0].append(navigation);
+    button = document.createElement("button");
+    button.className = "buttonText";
+    document.getElementsByClassName("button")[i].append(button);
+    document.getElementsByClassName("buttonText")[i].textContent = "Navigation text";
   }
 }
 
