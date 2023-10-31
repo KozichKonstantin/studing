@@ -17,9 +17,18 @@ const Incert = {
     }
 }
 class Output  {
-    constructor(functionName, input){
-        this.functionName = functionName,
+    constructor( input){
         this.input = input
+    }
+    set functionName(name){
+        if(name != ''){
+            this._functionName = name
+        }else{
+            this._functionName = 'default'
+        }
+    }
+    get functionName(){
+        return this._functionName
     }
     getOutput(){
         if(this.functionName == 'ctrlC'){
