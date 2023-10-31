@@ -16,3 +16,30 @@ const Incert = {
         }
     }
 }
+class Output  {
+    constructor(functionName, input){
+        this.functionName = functionName,
+        this.input = input
+    }
+    getOutput(){
+        if(this.functionName == 'ctrlC'){
+            return {
+                from: this.functionName,
+                out: spinWords(this.input)
+            }
+        }else{
+            if(this.functionName == 'toLower'){
+                return {
+                    from: this.functionName,
+                    out: toLower(this.input)
+                }
+            }
+            else{
+                return {
+                    from: this.functionName,
+                    out: this.input
+                }
+            }
+        }
+    }
+}

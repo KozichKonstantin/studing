@@ -1,34 +1,39 @@
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title> 
-            admin panel
-        </title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="head">
-            Command terminal
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>admin panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="head">Command terminal</div>
+    <div class="main">
+      <div class="input">
+        <div class="inputField">
+          <input class="incert" />
+          <section id="sect">
+                <input type="radio" name="chooseF" class="radioChooser" id="btn1">
+                <h4>
+                    ctrlC
+                </h4>
+                <input type="radio" name="chooseF" class="radioChooser" id="btn2">
+                <h4>
+                    toLower
+                </h4>
+          </section>
+          <input class="run" type="button" value="RUN" />
         </div>
-        <div class="main">
-            <div class="input">
-                <div class="inputField">
-                    <input class="incert">
-                    <input class="run" type="button" value="RUN">
-                </div>
-            </div>
-            <div class="output">
-                <div class="outputField">
-                    <textarea class="txt">
-                    </textarea>
-                </div>
-            </div>            
+      </div>
+      <div class="output">
+        <div class="outputField">
+          <textarea class="txt"> </textarea>
         </div>
-        <script src="./Classes.js"></script>
-        <script src="./output.js"></script>
-        <script src="./Objects.js"></script>
-        <script src="./functions.js"></script>
-        <script src="./listeners.js"></script>
-    </body>
+      </div>
+    </div>
+    <script src="./Classes.js"></script>
+    <script src="./output.js"></script>
+    <script src="./Objects.js"></script>
+    <script src="./functions.js"></script>
+    <script src="./listeners.js"></script>
+  </body>
 </html>

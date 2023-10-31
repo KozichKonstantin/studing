@@ -48,10 +48,23 @@ body{
     color:  rgb(138, 189, 234);
     font-size: 20px;
 }
+#sect{
+    display: flex;
+}
+#sect > h4{
+    font-size: 20px;
+    text-align: center;
+    width: 90px;
+}
+.radioChooser{
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
 .run{
     height: 50px;
     width: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     border-radius: 50%;
     background-color:  rgb(138, 189, 234);
     border: solid 2px rgb(245, 202, 255);
