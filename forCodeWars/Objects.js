@@ -33,30 +33,32 @@ class ConsoleUtility {
   checkout() {
     this.concat();
     let comandLine = document.getElementsByClassName("txt")[0];
-    if (this.command == "") {
-      this.out = "no commands sended";
-    } else {
-      if (this.commandObj.action == "cs") {
-        try {
-          comandLine.style.color = this.commandObj.value;
-        } catch (error) {
-          this.out = "incorrect color:" + this.commandObj.value;
-        }
-      } else {
-        if (this.commandObj.action == "bg" ) {
-            comandLine.style.backgroundColor = this.commandObj.value
-        }
-        // else{
-        // if(this.commandObj.action == 'cl'){
-        //     comandLine.value = '/#/';
-        //     this.out = this.commandObj.action
-        //     console.log(comandLine.value)
-        // }
-        else{
-            this.out = "incorrect command:" + this.command;
-        }
-        // }
-      }
+    switch(this.command){
+        case '': 
+            this.out = "no commands sended";
+            break;
+        default:
+            switch(this.commandObj.action){
+                case 'cs':
+                    comandLine.style.color = this.commandObj.value;
+                    this.out = `text color = ${this.commandObj.value}`
+                    break;
+                case 'bg':
+                    comandLine.style.backgroundColor = this.commandObj.value
+                    this.out = `background color = ${this.commandObj.value}`
+                    break;
+                case 'cl':
+                    // comandLine.value = (comandLine.textContent = '');
+                    // comandLine.nodeValue
+                    comandLine = document.querySelector('.txt')
+                    comandLine.textContent = comandLine.textContent + '+++'
+                    this.out = `console cleared`
+                    console.log(typeof(comandLine.textContent), comandLine.value)
+                    break;
+                default:
+                    this.out = `incorrect command: ${this.command}`
+            }
+            break;
     }
   }
 }
