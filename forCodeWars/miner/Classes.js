@@ -1,7 +1,7 @@
 export class MinerButton{
-    constructor(place, value){
+    constructor(place){
         this.place = place,
-        this.value = value,
+        this.value = 0,
         this.minesAround = 0,
         this.clicked = false
     }
