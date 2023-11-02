@@ -6,6 +6,9 @@ export class MinerButton{
         this.clicked = false
     }
     getValue(){
-        this.value = Math.floor(Math.random() * 2)
+        let random = Math.floor(Math.random() * 8)
+        if(random < 1){
+            this.value =1;
+        }
     }
 }
