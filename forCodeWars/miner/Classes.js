@@ -18,3 +18,9 @@ export class MinerButton{
             this.XY = [x, y]
     }
 }
+export class LinkList{
+    constructor(XY, object){
+        this.XY  = XY,
+        this.object = object
+    }
+}
