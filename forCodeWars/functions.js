@@ -28,5 +28,5 @@ function toLower(words) {
     return out.toLowerCase();
 }
 
-const ctrlC = new Input();
-output(ctrlC.value, "ctrlC");
+// const ctrlC = new Input();
+// output(ctrlC.value, "ctrlC");

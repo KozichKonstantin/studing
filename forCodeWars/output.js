@@ -4,12 +4,17 @@ function output (info, sourse){
     let fullinf = new Output
     fullinf.functionName = sourse;
     fullinf.input = info;
-    let content = textarea.textContent;
+    let content = textarea.value;
+    if(fullinf.input == '/@cl'){
+        content = ''
+        fullinf.input = ''
+    }
     fullinf.checkComm()
     if (sourse != null){
-        textarea.textContent = content + 'content from: '  + fullinf.getOutput().from + `\n` + fullinf.getOutput().out + '\n' + fullinf.command + '\n';
+        console.log(2)
+        textarea.value = content + 'content from: '  + fullinf.getOutput().from + `\n` + fullinf.getOutput().out + `\n`;
     }else{
-        textarea.textContent = content + `\n` + info;
+        textarea.value = content + `\n` + info;
     }
 
     textarea.scrollTop = textarea.scrollHeight;

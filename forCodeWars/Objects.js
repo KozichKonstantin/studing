@@ -48,12 +48,7 @@ class ConsoleUtility {
                     this.out = `background color = ${this.commandObj.value}`
                     break;
                 case 'cl':
-                    // comandLine.value = (comandLine.textContent = '');
-                    // comandLine.nodeValue
-                    comandLine = document.querySelector('.txt')
-                    comandLine.textContent = comandLine.textContent + '+++'
-                    this.out = `console cleared`
-                    console.log(typeof(comandLine.textContent), comandLine.value)
+                    this.out = `/@cl`;
                     break;
                 default:
                     this.out = `incorrect command: ${this.command}`
