@@ -7,7 +7,7 @@ for(let i =0 ; i < areaOfBombs.length; i++){
             placesMass[i].place.style.background = 'red'
         }else{
             placesMass[i].place.style.background = 'black'
-            console.log(placesMass[i])
+            console.log(placesMass[i].XY, placesMass[i].number)
             placesMass[i].place.value = placesMass[i].minesAround
         }
     })
