@@ -1,8 +1,8 @@
 import { placesMass } from "./objects.js";
 import { areaOfBombs } from "./objects.js";
+import { newButtonsMatr } from "./objects.js";
 import { linkedMass } from "./objects.js";
 // import { mass } from "./objects.js";
-import { newButtonsMatr } from "./objects.js";
 for(let i =0 ; i < areaOfBombs.length; i++){
     document.getElementsByClassName('place')[i].addEventListener('click', ()=>{
         placesMass[i].clicked = true;
@@ -11,7 +11,7 @@ for(let i =0 ; i < areaOfBombs.length; i++){
         }else{
             placesMass[i].place.style.background = 'black'
             console.log(newButtonsMatr)
-            placesMass[i].place.value = placesMass[i].minesAround
+            placesMass[i].place.value = newButtonsMatr[i%4][(i-i%4)/4].minesAround
         }
     })
 }
