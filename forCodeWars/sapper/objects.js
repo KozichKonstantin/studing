@@ -22,6 +22,11 @@ export const sapperGame = {
     this.controls = document.getElementsByName("minerButtons");
   },
   addScripts() {
+    let place = document.getElementsByClassName('additional')[0]
+    let element = document.createElement('div');
+    element.className = "scripts";
+    place.append(element)
+    place = document.getElementsByClassName("scripts")[0]
     let sapperDocs = [
         document.createElement("script"),
       document.createElement("script"),
@@ -32,16 +37,14 @@ export const sapperGame = {
       sapperDocs[i].src = waysMass[i];
       sapperDocs[i].type = "module";
       sapperDocs[i].className = 'addedScript'
-      document.getElementsByTagName("body")[0].append(sapperDocs[i]);
+      place.append(sapperDocs[i]);
     }
   },
   destroyGame(){
-    document.getElementsByClassName('miner')[0].remove()
-    this.controls = []
-    for(let script of document.getElementsByClassName('addedScript')){
-        script.remove()
-    }
     
+    document.getElementsByClassName('scripts')[0].remove()
+    document.getElementsByClassName('miner')[0].remove();
+    this.controls = [];
   }
 };
 export const Sapper = new Game(sapperGame, 0 , 4);
