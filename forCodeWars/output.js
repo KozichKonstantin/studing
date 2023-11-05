@@ -1,13 +1,30 @@
+import { Output } from "./Classes.js";
+import { Sapper } from "./sapper/objects.js";
+import { getClicks, startSapper } from "./miner/listeners.js";
+import { builder } from "./miner/setup.js";
 let textarea = document.getElementsByClassName("txt")[0];
 
-function output(info, sourse) {
+export function output(info, sourse) {
   let fullinf = new Output();
   fullinf.functionName = sourse;
   fullinf.input = info;
+  console.log(fullinf.input)
   let content = textarea.value;
   if (fullinf.input == "/@cl") {
     content = "";
     fullinf.input = "";
+  }
+  if(fullinf.input == "/!sapper-start"){
+    textarea.style.display = 'none'
+    Sapper.startGame();
+    console.log('started')
+  }
+  if(fullinf.input == "/!sapper-close"){ 
+    Sapper.closeGame();
+    textarea.style.display = 'block'
+  }
+  if(fullinf.input == "/!sapper-retry"){
+    Sapper.retryGame();
   }
   fullinf.checkComm();
   if (sourse != null) {

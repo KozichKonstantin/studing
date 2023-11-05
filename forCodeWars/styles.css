@@ -92,11 +92,10 @@ body{
     justify-content: center;
 }
 .miner{
-    width: 700px;
+    display: none;
+    width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px 50px;
 }
 .miner > input {
     color: white

@@ -1,4 +1,5 @@
-function spinWords(string) {
+
+export function spinWords(string) {
   function reverseWord(word) {
     let reversedWord = "";
     for (let i = word.length - 1; i >= 0; i--) {
@@ -23,7 +24,7 @@ function spinWords(string) {
   }
   return finalsentense;
 }
-function toLower(words) {
+export function toLower(words) {
     let out = ''+ words;
     return out.toLowerCase();
 }

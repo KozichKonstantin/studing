@@ -1,4 +1,7 @@
-class Input {
+import { spinWords } from "./functions.js";
+import { toLower } from "./functions.js";
+import { Sapper } from "./sapper/objects.js";
+export class Input {
   constructor() {}
   set value(value) {
     this._value = value.trim().toUpperCase();
@@ -18,7 +21,7 @@ class Input {
     }
   }
 }
-class Output {
+export class Output {
   constructor(input, command = false) {
     (this.input = input), (this.command = command);
   }
@@ -74,7 +77,7 @@ class Output {
     }
   }
 }
-class ConsoleUtility {
+export class ConsoleUtility {
   constructor(command = "", out = "") {
     (this.command = command), (this.out = out);
     this.commandObj = {
@@ -88,6 +91,7 @@ class ConsoleUtility {
     let mass = this.command.split(" ");
     this.commandObj.action = mass[0];
     this.commandObj.value = mass[1];
+    this.commandObj.gameSet = mass[2];
   }
   checkout() {
     this.concat();
@@ -108,6 +112,12 @@ class ConsoleUtility {
             break;
           case "cl":
             this.out = `/@cl`;
+            break;
+          case "gm":
+            this.out = 'gameSettings'
+            if (this.commandObj.value == 'sapper') {
+              Sapper.variable = this.commandObj.gameSet;
+            }
             break;
           default:
             this.out = `incorrect command: ${this.command}`;

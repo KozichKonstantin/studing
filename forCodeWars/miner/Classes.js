@@ -1,4 +1,4 @@
-import { lines } from "./setup.js";
+import { lines } from "../listeners.js";
 export class MinerButton{
     constructor(place, number){
         this.place = place,

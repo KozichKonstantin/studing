@@ -1,3 +1,5 @@
+import { output } from "./output.js";
+export const lines = 5;
 let choosed = "";
 document.getElementById("btn1").addEventListener("click", () => {
   choosed = "ctrlC";

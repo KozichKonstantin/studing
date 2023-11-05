@@ -1,5 +1,5 @@
 import { newButtonsMatr } from "./objects.js";
-import { lines } from "./setup.js";
+import { lines } from "../listeners.js";
 let maskMass = Array.from({ length: lines }, () =>
   Array.from({ length: lines }, () => 0)
 );
@@ -58,5 +58,3 @@ for(let i = 0; i < newButtonsMatr.length; i++){
         newButtonsMatr[i][j].minesAround = weightMatrix[i][j]
     }
 }
-console.log(maskMass);
-console.log(weightMatrix);

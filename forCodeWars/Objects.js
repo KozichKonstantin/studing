@@ -1,4 +1,5 @@
-const Incert = {
+import { Input } from "./Classes.js";
+export const Incert = {
   __prototype__: Input,
   validate: function () {
     if (typeof this.value == "string") {
