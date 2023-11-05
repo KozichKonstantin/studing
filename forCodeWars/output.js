@@ -1,7 +1,5 @@
 import { Output } from "./Classes.js";
 import { Sapper } from "./sapper/objects.js";
-import { getClicks, startSapper } from "./miner/listeners.js";
-import { builder } from "./miner/setup.js";
 let textarea = document.getElementsByClassName("txt")[0];
 
 export function output(info, sourse) {
