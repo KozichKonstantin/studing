@@ -62,6 +62,38 @@ function checker() {
     }
   }
 }
+// function openClosed(x,y){
+//   for (let i =0; i < maskMass.length; i++){
+//     for (let j = 0; j < maskMass[i].length; j++){
+//       if(maskMass[i][j] !=1){
+//         if (isExist(i - 1, j)) {
+//           weightMatrix[i - 1][j]++;
+//         }
+//         if (isExist(i + 1, j)) {
+//           weightMatrix[i + 1][j]++;
+//         }
+//         if (isExist(i, j + 1)) {
+//           weightMatrix[i][j + 1]++;
+//         }
+//         if (isExist(i, j - 1)) {
+//           weightMatrix[i][j - 1]++;
+//         }
+//         if (isExist(i + 1, j + 1)) {
+//           weightMatrix[i + 1][j + 1]++;
+//         }
+//         if (isExist(i - 1, j - 1)) {
+//           weightMatrix[i - 1][j - 1]++;
+//         }
+//         if (isExist(i + 1, j - 1)) {
+//           weightMatrix[i + 1][j - 1]++;
+//         }
+//         if (isExist(i - 1, j + 1)) {
+//           weightMatrix[i - 1][j + 1]++;
+//         }
+//       }
+//     }
+//   }
+// }
 export function addWeights() {
   for (let i = 0; i < newButtonsMatr.length; i++) {
     for (let j = 0; j < newButtonsMatr[i].length; j++) {
