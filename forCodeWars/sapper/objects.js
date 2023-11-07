@@ -41,10 +41,9 @@ export const sapperGame = {
     }
   },
   destroyGame(){
-    
+    this.controls = [];
     document.getElementsByClassName('scripts')[0].remove()
     document.getElementsByClassName('miner')[0].remove();
-    this.controls = [];
   }
 };
 export const Sapper = new Game(sapperGame, 0 , 4);
