@@ -28,7 +28,7 @@ export const sapperGame = {
     place.append(element);
     place = document.getElementsByClassName("scripts")[0];
     let sapperDocs = [
-      document.createElement("script"),
+      document.createElement("script"), 
       document.createElement("script"),
       document.createElement("script"),
     ];
