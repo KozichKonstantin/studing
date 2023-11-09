@@ -134,4 +134,49 @@ export function addWeights() {
     }
   }
 }
+export function gameEnded(matrix){
+  let clickedButs = 0;
+  let bombsCount = 0;
+  for(let i = 0; i < matrix.length; i++){
+    for(let j = 0; j < matrix[i].length; j++){
+      if(matrix[i][j].clicked == true){
+        clickedButs++;
+      }
+      if(matrix[i][j].value == 1){
+        bombsCount++;
+      }
+      if(matrix[i][j].clicked == true && matrix[i][j].value == 1){
+        return false
+      }
+    }
+  }
+  if((matrix.length*matrix.length)-clickedButs == bombsCount){
+    return true;
+  }
+  else{
+    return undefined;
+  }
+}
+export function buildEnd(boolean){
+  let ends = ['You won', 'You losed']
+  let place = document.getElementsByClassName("minerArea")[0];
+  let element = document.createElement("input");
+  element.type = 'button'
+  element.className = 'finish'
+  switch(boolean){
+    case true:
+      element.value = ends[0];
+      element.style.background = 'rgb(107, 254, 134)';
+      place.append(element);
+      break;
+    case false:
+      element.value = ends[1];
+      element.style.background = 'rgb(254, 136, 107)';
+      place.append(element);
+      break;
+    case undefined:
+      return console.log('not yet')
+  }
+
+}
 addWeights();
