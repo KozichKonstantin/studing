@@ -5,17 +5,27 @@ body{
 .container{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
 }
 form{
     width: 100%;
-    height: 100%;
     display: grid;
-    background-color: burlywood;
-    grid-template-rows: repeat(4, 50px);
-    grid-template-columns: repeat(5, 50px);
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: repeat(4, 90px);
+    grid-template-columns: repeat(5, 90px);
+}
+.buttonRec{
+    width: 60px;
+    height: 60px;
+    background-color: red;
 }
 .element{
     margin: 5px;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
 }

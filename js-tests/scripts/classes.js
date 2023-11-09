@@ -1,33 +1,27 @@
-class ElementsArray{
-    constructor(array){
-        this.array = array
+export class ElementsArray {
+  constructor(array) {
+    this.array = array;
+  }
+  recombine() {
+    let arry = []
+    for(let i = 0; i <  this.array.length; i++){
+        arry.push(this.array[i].color)
     }
-    recombine(){
-        let numbersArr= []
-        for(let i = 0; i < 16; i++){
-            numbersArr.push(i) ;
-        }
-        let newArr = [];
-        function add(arr){
-            let rand = Math.floor(Math.random()*arr.length)
-            arr.splice(rand-1, 1)
-            return {elem: arr[rand], id: rand, shorter: arr }
-        }
-        for(let i = 0; i < numbersArr.length; i++){
-            add(numbersArr)
-        }
+    let newArr = [];
+    while (arry.length > 0) {
+      let elemId = Math.floor(Math.random() * arry.length);
+      newArr.push(arry[elemId]);
+      arry.splice(elemId, 1);
     }
-}
-class Element{
-    constructor(position, color){
-        this.position = position
-        this.color = color
+    for(let i = 0; i < newArr.length; i++){
+        this.array[i].position.style.backgroundColor = newArr[i]
     }
-
+    return newArr
+  }
 }
-let arr = []
-for(let i =0 ; i < 16; i++){
-    arr.push()
+export class Element {
+  constructor(position, color) {
+    this.position = position;
+    this.color = color;
+  }
 }
-const elems =  new ElementsArray(arr)
-elems.recombine()
