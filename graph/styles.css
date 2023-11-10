@@ -1,0 +1,40 @@
+body{
+    margin:  0;
+    background-color: rgb(213, 255, 255);
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+header{
+    height: 70px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+.content{
+    width: 100%;
+    height: calc(100% - 161px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.graph{
+    height: 500px;
+    width: 50%;
+    border: solid rgb(97, 97, 97) 2px
+}
+.controls{
+    margin-top: 20px;
+}
+.controls > input{
+    width: 90px;
+    height: 40px;
+    background-color: beige;
+    border: solid 2px rgb(247, 102, 102);
+}
+footer{
+    height: 70px;
+    background-color: rgb(225, 198, 161);
+    text-align: center;
+    color: rgb(64, 73, 73);
+}
