@@ -7,16 +7,19 @@ export class MinerButton {
       (this.clicked = false);
   }
   getValue() {
+    console.log("miner getValue");
     let random = Math.floor(Math.random() * 8);
     if (random < 1) {
       this.value = 1;
     }
   }
   clickFunct(boolean) {
+    console.log("miner clickFunct");
     this.clicked = boolean;
     this.getStyle();
   }
   getStyle() {
+    console.log("miner getStyle()");
     if (this.clicked) {
       if (this.value == 1) {
         this.place.style.background = "red";

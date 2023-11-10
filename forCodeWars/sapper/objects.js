@@ -2,6 +2,7 @@ import { Game } from "./mainClass.js";
 export const sapperGame = {
   controls: [],
   createField(number) {
+    console.log('game createfield()')
     let place = document.getElementsByClassName("minerArea")[0];
     let element = document.createElement("div");
     element.className = "miner";
@@ -19,9 +20,11 @@ export const sapperGame = {
     }
   },
   findButtons() {
+    console.log('game findButtons()')
     this.controls = document.getElementsByName("minerButtons");
   },
   addScripts() {
+    console.log('game addScripts()')
     let place = document.getElementsByClassName("additional")[0];
     let element = document.createElement("div");
     element.className = "scripts";
@@ -45,6 +48,7 @@ export const sapperGame = {
     }
   },
   destroyGame() {
+    console.log('game destroyGame()')
     this.controls = [];
     document.getElementsByClassName("scripts")[0].remove();
     document.getElementsByClassName("miner")[0].remove();
