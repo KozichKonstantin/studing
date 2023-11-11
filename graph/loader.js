@@ -1,8 +1,8 @@
 function addSrc(){
-    const place = document.getElementsByTagName('head')[0]
-    let script = document.createElement('script')
-    script.src = './scripts/listeners.js'
-    script.type = 'module'
-    place.append(script)
+    const place = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
+    script.type = 'module';
+    script.src = './scripts/listeners.js';
+    place.append(script);
 }
-addSrc()
+addSrc();
