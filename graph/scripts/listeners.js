@@ -12,6 +12,6 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     let form = document.getElementsByClassName('form')[0].children
     switch(action){
         case 'add':
-          createElement(form[0].value, form[1].value, form[2].value, form[3].value)  
+          createElement(form[0].value, form[1].value, form[2].value)  
     }
 })

@@ -24,8 +24,27 @@ header{
     border: solid rgb(97, 97, 97) 2px
 }
 .graphElement{
+    display: grid;
+    grid-template-columns: 90px;
+    grid-template-rows: 17px 75px;
     width: 90px;
     height: 90px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+.connections{
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    grid-template-rows: repeat(3, 25px);
+}
+.connectPoint{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: solid 1px black;
 }
 .modal{
     position: fixed;

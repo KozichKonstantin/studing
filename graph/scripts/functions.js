@@ -1,23 +1,48 @@
 import { Graph, GraphElement } from "./Classes.js";
-const firstElement = new GraphElement(1, 5, [3,4], 1)
-const secondElement = new GraphElement(2, 2, [1, 3], 4)
 const newGrahp = new Graph([])
-newGrahp.showIt();
-newGrahp.findWay(1, 4)
-export function createElement(cost, connections, name, color){
+function circuitColors(iterator){
+    const colors = [
+        'rgb(31, 119, 119)',
+        'rgb(31, 72, 119)',
+        'rgb(35, 31, 119)',
+        'rgb(81, 31, 119)',
+        'rgb(118, 31, 119)',
+        'rgb(119, 31, 72)',
+        'rgb(119, 31, 31)',
+        'rgb(119, 109, 31)',
+        'rgb(72, 119, 31)',
+        'rgb(31, 119, 66)'
+    ]
+    if(iterator > colors.length-1){
+        iterator  = iterator - (Math.trunc(iterator / colors.length))*colors.length
+    }
+    return colors[iterator]
+}
+export function createElement(cost, connections, name){
+    let color = circuitColors(newGrahp.elements.length)
     connections = connections.split(', ')
     let place = document.getElementsByClassName('graph')[0];
     let element = document.createElement('div')
     element.className = `graphElement ${name}`;
-    let newElement = new GraphElement(element, cost, connections, name, color)
-    newElement.getColor(color)
-    newGrahp.addElement(newElement)
-    let connectedElements = newGrahp.getConnections(newElement)
-    console.log(connectedElements)
-    place.append(element)
+    let newElement = new GraphElement(element, cost, connections, name, color);
+    newElement.getColor(color);
+    newGrahp.addElement(newElement);
+    place.append(element);
     place = element;
-    element = document.createElement('div')
+    element = document.createElement('div');
     element.textContent = name;
-    element.style.backgroundColor = 'white'
-    place.append(element)
+    element.style.backgroundColor = 'white';
+    let connectedElements = newGrahp.getConnections(newElement);
+    place.append(element);
+    element = document.createElement('div');
+    element.className = 'connections';
+    place.append(element);
+    place = element;
+    for(let i = 0; i < connectedElements.length; i++){
+        let connectPoint = document.createElement('div');
+        connectPoint.className = 'connectPoint';
+        connectPoint.style.backgroundColor = connectedElements[i].color;
+        place.append(connectPoint);
+        console.log(connectedElements[i].color);
+    }
 }
