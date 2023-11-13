@@ -18,7 +18,14 @@ function circuitColors(iterator) {
   }
   return colors[iterator];
 }
-function appendElement(type, place, elemClass = "", name = "", value = "") {
+function appendElement(
+  type,
+  place,
+  elemClass = "",
+  name = "",
+  value = "",
+  ret = 0
+) {
   let element = document.createElement(type);
   let appendPlace = document.getElementsByClassName(place)[0];
   element.className = elemClass;
@@ -28,25 +35,38 @@ function appendElement(type, place, elemClass = "", name = "", value = "") {
   if (value != "") {
     element.value = value;
   }
-  appendPlace.append(element);
+  if ((ret == 0)) {
+    appendPlace.append(element);
+  }
   return element;
 }
 export function createElement(cost, connections, name) {
   let color = circuitColors(newGrahp.elements.length);
   connections = connections.split(", ");
-  let element = appendElement('div', 'graph', `graphElement ${name}`)
+  let lines = [];
+  if(connections[0] != ''){
+    let linesPlace = appendElement("div", "graph", `linesBlock ${name}` );
+    for (let i = 0; i < connections.length; i++) {
+    lines.push(appendElement("hr", linesPlace.classList, "hrLine"));
+  }
+  }
+  
+  let element = appendElement("div", "graph", `graphElement ${name}`);
+
   let newElement = new GraphElement(element, cost, connections, name, color);
   newElement.getColor(color);
+
   newGrahp.addElement(newElement);
   let place = element.classList;
-  element = appendElement('div', place, `elementName ${name}`)
+  element = appendElement("div", place, `elementName ${name}`);
   element.textContent = name;
   element.style.backgroundColor = "white";
   let connectedElements = newGrahp.getConnections(newElement);
-  place = appendElement('div', place, `connections ${name}`)
+  place = appendElement("div", place, `connections ${name}`);
   for (let i = 0; i < connectedElements.length; i++) {
-    console.log(place.classList)
-    let connectPoint = appendElement('div', place.className, 'connectPoint')
+    console.log(place.classList);
+    let connectPoint = appendElement("div", place.className, "connectPoint");
     connectPoint.style.backgroundColor = connectedElements[i].color;
+    lines[i].style.backgroundColor = connectedElements[i].color;
   }
 }

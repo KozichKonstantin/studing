@@ -1,105 +1,117 @@
-body{
-    margin:  0;
-    background-color: rgb(213, 255, 255);
+body {
+  margin: 0;
+  background-color: rgb(213, 255, 255);
 }
-.container{
-    width: 100%;
-    height: 100%;
+.container {
+  width: 100%;
+  height: 100%;
 }
-header{
-    height: 70px;
-    background-color: antiquewhite;
-    text-align: center;
+header {
+  height: 70px;
+  background-color: antiquewhite;
+  text-align: center;
 }
-.content{
-    width: 100%;
-    height: calc(100% - 161px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.content {
+  width: 100%;
+  height: calc(100% - 161px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.graph{
-    height: 500px;
-    width: 50%;
-    border: solid rgb(97, 97, 97) 2px
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 50%;
+  border: solid rgb(97, 97, 97) 2px;
 }
-.graphElement{
-    display: grid;
-    grid-template-columns: 90px;
-    grid-template-rows: 17px 75px;
-    width: 90px;
-    height: 90px;
-    margin-top: 5px;
-    margin-left: 10px;
-    border: 1px solid black;
+hr {
+  margin: 0;
+  width: 5px;
+  height: 20px;
+  background-color: #228b22;
 }
-.connections{
-    display: grid;
-    grid-template-columns: repeat(3, 25px);
-    grid-template-rows: repeat(3, 25px);
+.linesBlock{
+  display: flex;
 }
-.connectPoint{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin-top: 5px;
-    margin-left: 10px;
-    border: solid 1px black;
+.graphElement {
+  display: grid;
+  grid-template-columns: 90px;
+  grid-template-rows: 17px 75px;
+  width: 90px;
+  height: 90px;
+  /* margin-top: 5px; */
+  margin-left: 10px;
+  border: 1px solid black;
 }
-.modal{
-    position: fixed;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
-    height: 350px;
-    margin-top: 80px;
-    background-color: rgba(127, 127, 127, 0.7);
-    border-radius: 40px;
-    transition: 0.5s ease-in-out;
+.connections {
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  grid-template-rows: repeat(3, 25px);
 }
-.close{
-    display: flex;
-    width: 30px;
-    height: 30px;
-    align-self: flex-end;
-    align-items: center;
-    justify-content: center;
-    margin-right: 30px;
-    margin-top: 25px;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
+.connectPoint {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-left: 10px;
+  border: solid 1px black;
 }
-.close:hover{
-    background-color: white;
-    border-radius: 50%;
+.modal {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  margin-top: 80px;
+  background-color: rgba(127, 127, 127, 0.7);
+  border-radius: 40px;
+  transition: 0.5s ease-in-out;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 200px;
+.close {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
-.form > input{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 120px;
-    height: 40px;
+.close:hover {
+  background-color: white;
+  border-radius: 50%;
 }
-.controls{
-    margin-top: 20px;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
 }
-.controls > input{
-    width: 90px;
-    height: 40px;
-    background-color: beige;
-    border: solid 2px rgb(247, 102, 102);
+.form > input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 40px;
 }
-footer{
-    height: 70px;
-    background-color: rgb(225, 198, 161);
-    text-align: center;
-    color: rgb(64, 73, 73);
+.controls {
+  margin-top: 20px;
+}
+.controls > input {
+  width: 90px;
+  height: 40px;
+  background-color: beige;
+  border: solid 2px rgb(247, 102, 102);
+}
+footer {
+  height: 70px;
+  background-color: rgb(225, 198, 161);
+  text-align: center;
+  color: rgb(64, 73, 73);
 }
