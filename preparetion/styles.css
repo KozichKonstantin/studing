@@ -26,9 +26,15 @@ header {
   width: 50%;
   border: solid rgb(97, 97, 97) 2px;
 }
+.graphElement{
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+}
 hr {
+  position: fixed;
   margin: 0;
   width: 5px;
-  height: 20px;
+  /* height: 20px; */
   background-color: #228b22;
 }
