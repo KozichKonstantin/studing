@@ -28,9 +28,13 @@ const colors = [
   let graphHtml = document.getElementsByClassName('graph')[0]
   for(let i = 0; i< colors.length; i++){
     let element = addElemet('div', graphHtml, 'graphElement', colors[i])
-    element.style.marginLeft = `${-40 * i}px`
+    // element.style.marginLeft = `${-40 * i}px`
     let newElement = new GraphElement(element, [element.getBoundingClientRect().x, element.getBoundingClientRect().y], colors[i])
     GraphObj.addElement(newElement);
+  }
+  let enumer = 0;
+  function positionate(element){
+    
   }
   console.log(GraphObj)
   createLine(GraphObj.elements[0], GraphObj.elements[1])
