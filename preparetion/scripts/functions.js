@@ -32,9 +32,38 @@ const colors = [
     let newElement = new GraphElement(element, [element.getBoundingClientRect().x, element.getBoundingClientRect().y], colors[i])
     GraphObj.addElement(newElement);
   }
-  let enumer = 0;
-  function positionate(element){
-    
+const testMass = [[3, 0],[1, 1],[1, 2],[2, 3],[3, 4],[3, 5]]
+function sortIt(mass){
+  let massOfLines =[]
+  let empty = []
+  for(let i = 0 ; i < mass.length; i++){
+    if (massOfLines.includes(mass[i][0])){
+
+    }else{
+      massOfLines.push(mass[i][0])
+    }
   }
+  massOfLines = massOfLines.map((element)=> element = [element , []])
+  for(let i = 0; i < mass.length; i++){
+    for (let j =0; j < massOfLines.length; j++){
+      if(massOfLines[j][0] == mass[i][0]){
+        massOfLines[j][1].push(mass[i][1]) 
+      }
+    }
+  }
+  return massOfLines
+}
+function resultIn(massOfLines){
+  let out  = '';
+  for(let i = 0; i < massOfLines.length; i++){ /// по этому кооличеству создавать линии
+    for(let j = 0;  j < massOfLines[i][1].length; j++){ ///а по этому элементы
+      out += massOfLines[i][1][j] + ' '
+    }
+    out += '\n'
+  }
+  return console.log(out)
+}
+console.log(sortIt(testMass))
+resultIn(sortIt(testMass))
   console.log(GraphObj)
   createLine(GraphObj.elements[0], GraphObj.elements[1])
