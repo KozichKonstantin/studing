@@ -52,3 +52,45 @@ export class GraphElement{
         console.log(this)
     }
 }
+export class VisualStructure{
+    constructor(){
+        this.elements = []
+    }
+    addElement(newElement){
+        this.elements.push(newElement)
+        return this.elements
+    }
+    structure(){
+        let mapped =[]
+        let divs = this.elements.map((elem)=>elem.position)
+        console.log(this.elements)
+        let conns = this.elements.map((elem)=>elem.connections.length)
+        for(let i = 0 ; i < this.elements.length; i ++){
+            mapped.push([conns[i], divs[i]])
+        }
+        return mapped
+    }
+    sort(mapped){
+        function sortIt(mass){
+            let massOfLines =[]
+            let empty = []
+            for(let i = 0 ; i < mass.length; i++){
+              if (massOfLines.includes(mass[i][0])){
+          
+              }else{
+                massOfLines.push(mass[i][0])
+              }
+            }
+            massOfLines = massOfLines.map((element)=> element = [element , []])
+            for(let i = 0; i < mass.length; i++){
+              for (let j =0; j < massOfLines.length; j++){
+                if(massOfLines[j][0] == mass[i][0]){
+                  massOfLines[j][1].push(mass[i][1]) 
+                }
+              }
+            }
+            return massOfLines
+          }
+          return sortIt(mapped)
+    }
+}

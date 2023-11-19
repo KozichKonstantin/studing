@@ -1,4 +1,4 @@
-import { Graph, GraphElement } from "./Classes.js";
+import { Graph, GraphElement, VisualStructure } from "./Classes.js";
 const newGrahp = new Graph([]);
 function circuitColors(iterator) {
   const colors = [
@@ -69,4 +69,11 @@ export function createElement(cost, connections, name) {
     connectPoint.style.backgroundColor = connectedElements[i].color;
     lines[i].style.backgroundColor = connectedElements[i].color;
   }
+}
+let visual = new VisualStructure
+export function sortGraph(){
+  for(let i = 0; i < newGrahp.elements.length; i++){
+    visual.addElement(newGrahp.elements[i])
+  }
+  console.log(visual.sort(visual.structure()))
 }
