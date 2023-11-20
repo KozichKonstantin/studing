@@ -1,4 +1,4 @@
-import { createElement, sortGraph } from "./functions.js";
+import { createElement, getSortedGraph} from "./functions.js";
 let action = '';
 document.getElementsByClassName('buttonAdd')[0].addEventListener('click', ()=>{
     document.getElementsByClassName('modal')[0].style.display = 'flex';
@@ -16,5 +16,5 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     }
 })
 document.getElementsByClassName('buttonSort')[0].addEventListener('click', ()=>{
-    sortGraph()
+    getSortedGraph(document.getElementsByClassName('graph')[0])
 })

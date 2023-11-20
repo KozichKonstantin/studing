@@ -93,7 +93,7 @@ export class VisualStructure {
     return sortIt(mapped);
   }
 }
-export class SorterdGraph {
+export class SortedGraph {
   constructor(lines) {
     this.lines = lines;
   }
@@ -113,12 +113,17 @@ export class SorterdGraph {
     return line
   }
   appendElements(place){
+    console.log(this.lines)
     for(let i = 0 ; i < this.lines.length; i++){
         let line = this.createLine()
-        place.append(line.classList.add(`line${i}`))
-        for(let j =0 ; j < this.lines[i].length; j++){
-            line.append(this.linees[i][j].place)
+        
+        for(let j =0 ; j < this.lines[i][1].length; j++){
+            // console.log(this.lines[i][1][j])
+            console.log(line)
+            line.append(this.lines[i][1][j])
+            console.log('sorting...')
         }
+        document.getElementsByClassName('graph')[0].append(line)
     }
   }
 }

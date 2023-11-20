@@ -1,4 +1,4 @@
-import { Graph, GraphElement, VisualStructure } from "./Classes.js";
+import { Graph, GraphElement, SortedGraph, VisualStructure } from "./Classes.js";
 const newGrahp = new Graph([]);
 function circuitColors(iterator) {
   const colors = [
@@ -76,4 +76,10 @@ export function sortGraph(){
     visual.addElement(newGrahp.elements[i])
   }
   console.log(visual.sort(visual.structure()))
+  return visual.sort(visual.structure())
+}
+export function getSortedGraph (place){
+  let sortedGraph = new SortedGraph(sortGraph())
+  sortedGraph.appendElements(place);
+  
 }
