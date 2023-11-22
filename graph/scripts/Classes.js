@@ -73,7 +73,6 @@ export class VisualStructure {
   sort(mapped) {
     function sortIt(mass) {
       let massOfLines = [];
-      let empty = [];
       for (let i = 0; i < mass.length; i++) {
         if (massOfLines.includes(mass[i][0])) {
         } else {
@@ -114,14 +113,14 @@ export class SortedGraph {
   }
   appendElements(place){
     console.log(this.lines)
+    document.querySelectorAll('.linesBlock').forEach((elem)=>elem.remove())
     for(let i = 0 ; i < this.lines.length; i++){
         let line = this.createLine()
         
         for(let j =0 ; j < this.lines[i][1].length; j++){
-            // console.log(this.lines[i][1][j])
+            console.log(this.lines[i][1][j])
             console.log(line)
             line.append(this.lines[i][1][j])
-            console.log('sorting...')
         }
         document.getElementsByClassName('graph')[0].append(line)
     }

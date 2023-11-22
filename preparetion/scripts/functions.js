@@ -15,7 +15,6 @@ const colors = [
     place.append(element)
     return element
   }
-  let coordinates= []
   function createLine(fromElement, toElement){
     let line = document.createElement('hr')
     let place = document.getElementsByClassName('graph')[0]
