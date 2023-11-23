@@ -10,8 +10,8 @@ export class Graph {
   getConnections(element) {
     let connectedElements = [];
     let connections = element.connections;
-    console.log(element);
-    console.log(connections);
+    // console.log(element);
+    // console.log(connections);
     for (let i = 0; i < this.elements.length; i++) {
       for (let j = 0; j < connections.length; j++) {
         if (this.elements[i].name == connections[j]) {
@@ -118,8 +118,8 @@ export class SortedGraph {
         let line = this.createLine()
         
         for(let j =0 ; j < this.lines[i][1].length; j++){
-            console.log(this.lines[i][1][j])
-            console.log(line)
+            // console.log(this.lines[i][1][j])
+            // console.log(line)
             line.append(this.lines[i][1][j])
         }
         document.getElementsByClassName('graph')[0].append(line)

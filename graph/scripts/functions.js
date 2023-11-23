@@ -64,7 +64,7 @@ export function createElement(cost, connections, name) {
   let connectedElements = newGrahp.getConnections(newElement);
   place = appendElement("div", place, `connections ${name}`);
   for (let i = 0; i < connectedElements.length; i++) {
-    console.log(place.classList);
+    // console.log(place.classList);
     let connectPoint = appendElement("div", place.className, "connectPoint");
     connectPoint.style.backgroundColor = connectedElements[i].color;
     lines[i].style.backgroundColor = connectedElements[i].color;
@@ -75,11 +75,27 @@ export function sortGraph(){
   for(let i = 0; i < newGrahp.elements.length; i++){
     visual.addElement(newGrahp.elements[i])
   }
-  console.log(visual.sort(visual.structure()))
+  // console.log(visual.sort(visual.structure()))
   return visual.sort(visual.structure())
 }
 export function getSortedGraph (place){
   let sortedGraph = new SortedGraph(sortGraph())
   sortedGraph.appendElements(place);
-  
+  newGrahp.showIt()
+}
+export function createConnectionLines(element){
+  let connectedElements = newGrahp.getConnections(element)
+  for(let connected of connectedElements){
+    console.log(connected.position)
+    let line = document.createElement('hr')
+    line.className = 'positionLine'
+    let place = element.position.parentElement;
+    line.style.height = connected.position.coordinates[1] - element.position.coordinates[1]
+    line.style.transform = `translateY(${(fromElement.coordinates[1] + connected.position.coordinates[1])/2 -80}px)`
+    line.style.rotate = `${-((connected.position.coordinates[0] - element.position.coordinates[0])/(connected.position.coordinates[1] - element.position.coordinates[1]))*90}deg`
+    place.append(line)
+  }
+}
+export function initLines(){
+  newGrahp.elements.map((element) => createConnectionLines(element))
 }
