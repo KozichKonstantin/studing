@@ -86,13 +86,17 @@ export function getSortedGraph (place){
 export function createConnectionLines(element){
   let connectedElements = newGrahp.getConnections(element)
   for(let connected of connectedElements){
-    console.log(connected.position)
+    let fromElement = document.getElementsByClassName(`${element.position.classList}`)[0]
+    let toElement = document.getElementsByClassName(`${connected.position.classList}`)[0] 
+    fromElement.coordinates = [fromElement.getBoundingClientRect().x, fromElement.getBoundingClientRect().y]
+    toElement.coordinates = [toElement.getBoundingClientRect().x, toElement.getBoundingClientRect().y]
+    console.log(toElement.coordinates)
     let line = document.createElement('hr')
     line.className = 'positionLine'
     let place = element.position.parentElement;
-    line.style.height = connected.position.coordinates[1] - element.position.coordinates[1]
-    line.style.transform = `translateY(${(fromElement.coordinates[1] + connected.position.coordinates[1])/2 -80}px)`
-    line.style.rotate = `${-((connected.position.coordinates[0] - element.position.coordinates[0])/(connected.position.coordinates[1] - element.position.coordinates[1]))*90}deg`
+    line.style.height = toElement.coordinates[1] - fromElement.coordinates[1]
+    line.style.transform = `translateY(${(fromElement.coordinates[1] + toElement.coordinates[1])/2 -80}px)`
+    line.style.rotate = `${-((toElement.coordinates[0] - fromElement.coordinates[0])/(toElement.coordinates[1] - fromElement.coordinates[1]))*90}deg`
     place.append(line)
   }
 }

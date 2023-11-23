@@ -16,7 +16,6 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     }
 })
 document.getElementsByClassName('buttonSort')[0].addEventListener('click', ()=>{
-    initLines()
     getSortedGraph(document.getElementsByClassName('graph')[0])
-    
+    initLines()
 })

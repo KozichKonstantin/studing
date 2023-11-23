@@ -34,7 +34,6 @@ const colors = [
 const testMass = [[3, 0],[1, 1],[1, 2],[2, 3],[3, 4],[3, 5]]
 function sortIt(mass){
   let massOfLines =[]
-  let empty = []
   for(let i = 0 ; i < mass.length; i++){
     if (massOfLines.includes(mass[i][0])){
 
