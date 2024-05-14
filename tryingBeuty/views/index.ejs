@@ -1,117 +1,139 @@
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title> 
-            fitness
-        </title>
-        <link rel="stylesheet" href="globalStyles.css">
-        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>fitness</title>
+        <link rel="stylesheet" href="globalStyles.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="navigation.css" />
+        <link rel="stylesheet" href="popup.css" />
     </head>
     <body>
         <div class="content">
-            <header>
-                <div class="headContent">
-                    
-                    <div class="user">
-                        <a href="regPage.html">
-                        <div class="frame">
-                            <h2>
-                                USER
-                            </h2>
-                        </div>
-                    </a>
+        <header>
+            <div class="headContent">
+            <div class="user">
+                <a href="regPage.html">
+                <div class="frame">
+                    <h2>USER</h2>
+                </div>
+                </a>
+            </div>
+            <div class="logo">
+                <img src="./images/Fitness_logo_watchos.png" />
+            </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="mainContent">
+            <div class="glassPlates">
+                <div class="bigPlate">
+                <div class="inputMain">
+                    <div class="inputs">
+                    <p>Age</p>
+                    <input class="age" />
                     </div>
-                    <div class="logo">
-                            <img src="./images/Fitness_logo_watchos.png">
+                    <div class="inputs">
+                    <p>Sex</p>
+                    <input class="sex" />
+                    </div>
+                    <div class="inputs">
+                    <p>Tall</p>
+                    <input class="tall" />
                     </div>
                 </div>
-            </header>
-            <div class="main">
-                <div class="mainContent">
-                    <div class="glassPlates">
-                        <div class="bigPlate">
-                            <div class="inputMain">
-                                <div class="inputs">
-                                    <p> Age </p>
-                                    <input class="age">
-                                </div>
-                                <div class="inputs">
-                                    <p> Sex </p>
-                                    <input class="sex">
-                                </div>
-                                <div class="inputs">
-                                    <p> Tall </p>
-                                    <input class="tall">
-                                </div>
-                            </div>
-                            <div class="additionals">
-                                <div class="sportPicture">
-                                    <img src="./images/1210282.png">
-                                </div>
-                                <div class="sportDescription">
-                                    <input type="button" class="taskText top" value="Task">
-                                    <input type="button" class="taskText bot" value="Exp">
-                                </div>
-                            </div>
-                            <div class="additionals">
-                                <div class="sportPicture">
-                                    <img src="./images/2307896.png">
-                                </div>
-                                <div class="sportDescription">
-                                    <input type="button" class="taskText top" value="Task">
-                                    <input type="button" class="taskText bot" value="Exp">
-                                </div>
-                            </div>
-                            <div class="additionals">
-                                <div class="sportPicture">
-                                    <img src="./images/2771460.png">
-                                </div>
-                                <div class="sportDescription">
-                                    <input type="button" class="taskText top" value="Task">
-                                    <input type="button" class="taskText bot" value="Exp">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="statsPlate">
-                            <div class="statsGraphs">
-                                <div class="arrow left">
-
-                                </div>
-                                <div class="graph">
-                                    <div class="collumsContent">
-
-                                    </div>
-                                    <div class="datesContent">
-                                        
-                                    </div>
-                                </div>
-                                <div class="arrow right">
-
-                                </div>
-                            </div>
-                            <div class="statsNums">
-                                <h3>Write youre weight</h3>
-                                <div class="addNewStats">
-                                    <input class="addWeight" type="number" max="400">
-                                    <input class="addDate" type="date" required pattern="\d{2}/\d{2}">
-                                    <input class="submit" type="button" value="submit">
-                                </div>
-                            </div>
-                        </div>
+                <div class="additionals">
+                    <div class="sportPicture">
+                    <img src="./images/1210282.png" />
+                    </div>
+                    <div class="sportDescription">
+                    <input type="button" class="taskText top" value="Task" />
+                    <input type="button" class="taskText bot" value="Exp" />
                     </div>
                 </div>
-                <div class="navigation">
-
+                <div class="additionals">
+                    <div class="sportPicture">
+                    <img src="./images/2307896.png" />
+                    </div>
+                    <div class="sportDescription">
+                    <input type="button" class="taskText top" value="Task" />
+                    <input type="button" class="taskText bot" value="Exp" />
+                    </div>
+                </div>
+                <div class="additionals">
+                    <div class="sportPicture">
+                    <img src="./images/2771460.png" />
+                    </div>
+                    <div class="sportDescription">
+                    <input type="button" class="taskText top" value="Task" />
+                    <input type="button" class="taskText bot" value="Exp" />
+                    </div>
+                </div>
+                </div>
+                <div class="statsPlate">
+                <div class="statsGraphs">
+                    <div class="arrow left">
+                    <div class="arrowPic">
+                        <div class="picTop"></div>
+                        <div class="picBott"></div>
+                    </div>
+                    </div>
+                    <div class="graph basic">
+                    <div class="collumsContent"></div>
+                    <div class="datesContent"></div>
+                    </div>
+                    <div class="arrow right">
+                    <div class="arrowPic">
+                        <div class="picTop"></div>
+                        <div class="picBott"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="statsNums">
+                    <h3>Write youre weight</h3>
+                    <div class="addNewStats">
+                    <input class="addWeight" type="number" max="400" />
+                    <input
+                        class="addDate"
+                        type="date"
+                        required
+                        pattern="\d{2}/\d{2}"
+                    />
+                    <input class="submit" type="button" value="Yah!" />
+                    </div>
+                </div>
                 </div>
             </div>
-            <footer>
-
-            </footer>
+            </div>
+            <div class="navigation"></div>
         </div>
-        <script src="./Classes.js"></script>
-        <script src="./Objects.js"></script>
-        <script src="./functions.js"></script>
-        <script src="./listeners.js"></script>
+        <footer></footer>
+        </div>
+        <div class="popup">
+        <div class="popGlass">
+            <div class="pop_text">
+            <p>Gymnastics</p>
+            <p>
+                Officia nisi adipisicing magna quis pariatur proident do non ex.
+                Officia nisi adipisicing magna quis pariatur proident do non ex.
+            </p>
+            </div>
+            <input type="button" class="btn_submit" value="Try!" />
+        </div>
+        <img
+            class="close_pop"
+            src="./images/17047.png"
+            width="25px"
+            height="25px"
+        />
+        </div>
+        <div class="shadow_pop"></div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./scripts/Classes.js"></script>
+        <script src="./scripts/fff_popup.js"></script>
+        <script src="./scripts/Objects.js"></script>
+        <script src="./scripts/functions.js"></script>
+        <script src="./scripts/grf.js"></script>
+        <script src="./scripts/listeners.js"></script> 
     </body>
 </html>

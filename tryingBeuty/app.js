@@ -1,14 +1,21 @@
-import { UserParams } from "./algotithm.js";
+//import { UserParams } from "./algotithm.js";
 const express = require("express");
 const http = require("http");
 const fs = require("fs");
 const app = express();
 const Port = 3000;
 const mysql = require("mysql");
-const urlencodedParcer = express.urlencodedParcer({ extended: false });
-// import connection from './connection';
+const bodyParser = require("body-parser");
+const urlencondedParcer = express.urlencoded({ extended: false });
+var jsonParser = bodyParser.json();
+app.use(express.static(`${__dirname}/views`));
+// import connection from './connection.js';
 const connect = mysql.createConnection({
-  connection,
+        host : "localhost",
+        database : "fitnes",
+        user : "siteFindigBase",
+        password : "humansedrexstep",
+        port : "3306"
 });
 app.listen(Port, (error) => {
   error
@@ -20,7 +27,6 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 app.get("/userPage", (req, res) => {
-  console.log("huy");
   res.render("userPage");
 });
 app.get("/userParams", (req, res) => {
@@ -32,6 +38,9 @@ app.get("/userParams", (req, res) => {
 app.get("/userPage/login", (req, res) => {
   res.render("login");
 });
-app.post("/userPage/login", urlencodedParcer, (req, res) => {
+app.get("/regPAge", (req, res) => {
+    res.render("regPage")
+})
+app.post("/userPage/login", urlencondedParcer, (req, res) => {
   res.end;
 });

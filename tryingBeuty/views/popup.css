@@ -1,0 +1,117 @@
+.close_pop{
+    z-index: 10;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.close_pop:hover{
+    animation: rotates 0.25s infinite;
+}
+
+
+    
+@keyframes rotates{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(36deg);
+    }
+    40%{
+        transform: rotate(72deg);
+    }
+    60%{
+        transform: rotate(108deg);
+    }
+    80%{
+        transform: rotate(144deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+
+.popGlass{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: var(--innerSecond-bg-color);
+    border: 5px solid rgba(189, 255, 244, 0.4);
+    /* display: flex;
+    align-items: flex-end;
+    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.popup{
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    /* background-color: red; */
+    opacity: 0;
+    position: fixed;
+    top: -100%;
+}
+.pop_active{
+    opacity: 1;
+    z-index: 100;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.shadow_pop{
+    position: fixed;
+    opacity: 0;
+    left:-100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.shadow_pop_active{
+    z-index: 99;
+    opacity: 1;
+    left: 0;
+}
+
+
+.pop_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+.pop_text>p{
+    width: 70%;
+    background-color: var(--innerFirst-bg-color);
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+    font-family: 'Days';
+    /* padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px; */
+}
+.btn_submit{
+    height: 50px;
+    width: 90px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: var(--task-color);
+    font-family: 'Days';
+    font-size: 20px;
+    border: 2px solid var(--main-intaractive-color);
+}

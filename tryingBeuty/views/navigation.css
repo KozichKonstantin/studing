@@ -1,0 +1,105 @@
+.navigation {
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 80%;
+  width: 15%;
+  margin-top: -180px;
+  margin-left: 50px;
+  margin-right: -300px;
+}
+[name="added"] {
+  animation: open 0.5s;
+}
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+[name="deleted"] {
+  animation: close 0.5s;
+}
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+}
+.navCase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  background-color: var(--opacity-bg-color);
+  border-radius: 80px;
+  border: 2px solid var(--main-border-color);
+  box-shadow: var(--main-shadow-color) 0px 2px 0px 2px;
+}
+.button {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 120px;
+  background-color: var(--main-intaractive-color);
+  border-radius: 20px;
+  transition: 0.5s ease;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.button:hover {
+  animation: drawBorder 0s;
+  border: 2px solid rgb(255, 143, 143);
+  background-color: rgb(255, 169, 169);
+}
+/* кривая хуйня - переделать */
+@keyframes drawBorder {
+  0% {
+  }
+  100% {
+    margin: -2px;
+  }
+}
+.buttonText{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+    z-index: 10;
+    border-radius: 25px;
+    background-color: var(--main-intaractive-color);
+    transition: 0.5s ease;
+}
+.buttonText:hover{
+    color:  black;
+}
+.buttonText:after {
+ content: '';
+ z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  text-align: center;
+  font-size: 15px;
+  background: rgba(255, 0, 0, 0.3);
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.buttonText:hover:after {
+    width: 100%;
+}

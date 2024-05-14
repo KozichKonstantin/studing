@@ -1,0 +1,120 @@
+:root {
+  --main-intaractive-color: rgba(252, 174, 174, 0.834);
+  --main-bg-color: rgba(255, 255, 255, 0.3);
+  --innerFirst-bg-color: rgb(211, 223, 249);
+  --innerSecond-bg-color: rgba(244, 242, 213, 0.919);
+  --task-color: rgb(191, 255, 255);
+  --opacity-bg-color: rgba(255, 215, 254, 0.145);
+  --main-shadow-color: rgba(0, 0, 255, 0.145);
+  --main-border-color: rgb(189, 255, 244, 0.4);
+}
+@font-face {
+  font-family: "Days";
+  src: url("./images/fonts/days.ttf");
+}
+@font-face {
+  font-family: "Evgenia Deco";
+  src: url("./images/b5c255f6e9a501688e491894ddc0d0f0/fonts/evgenia_deco.ttf"); /* IE 9 Compatibility Mode */
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-blend-mode: screen;
+  background: linear-gradient(limegreen, transparent),
+    linear-gradient(90deg, skyblue, transparent),
+    linear-gradient(-90deg, coral, transparent);
+}
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(115, 250, 151, 0.3);
+}
+header {
+  width: 100%;
+  height: 120px;
+}
+.user,
+.logo,
+.main,
+.statsGraphs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user > a {
+  text-decoration: none;
+  font-family: "Days";
+  color: black;
+}
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background-color: rgb(236, 232, 117);
+  border-radius: 50%;
+}
+.frame > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 135px;
+  border-radius: 30px;
+  background-color: white;
+}
+.headContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.user {
+  width: 10%;
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+  margin-right: 15px;
+}
+.logo > img {
+  width: 90px;
+  height: 90px;
+  margin-left: calc(-5% - 120px);
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+.mainContent {
+  width: 60%;
+  height: 100%;
+}
+.glassPlates {
+  z-index: 10;
+  position: absolute;
+
+  display: flex;
+  width: 60%;
+  height: 80%;
+  border-radius: 30px;
+  background-color: var(--main-bg-color);
+  border: solid 5px;
+  border-color: rgb(189, 255, 244, 0.4);
+  box-shadow: rgba(0, 0, 255, 0.145) 0px 2px 0px 2px;
+  animation: create 0.5s;
+}
+@keyframes create {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
