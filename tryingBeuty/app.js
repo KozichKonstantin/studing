@@ -38,7 +38,7 @@ app.get("/userParams", (req, res) => {
 app.get("/userPage/login", (req, res) => {
   res.render("login");
 });
-app.get("/regPAge", (req, res) => {
+app.get("/regPage", (req, res) => {
     res.render("regPage")
 })
 app.post("/userPage/login", urlencondedParcer, (req, res) => {

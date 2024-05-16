@@ -1,5 +1,7 @@
 let objMass = [];
 let allObjMass = [];
+import { UserParams } from "./algorithm.js";
+
 document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     
     let collumns = document.getElementsByClassName('column');
@@ -27,7 +29,13 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     buidGraf();
 })
 document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
+    let user1 = new UserParams(60, 180, 75);
+    user1.GetIMT();
+    user1.GetParams();
+    user1.GetProgram();
+    console.log(user1);
     builder();
+    
 })
 
 /***
@@ -37,6 +45,7 @@ document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
 document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
     grClass('leftGr');
     buidGraf();
+    
 })
 
 document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
