@@ -9,7 +9,7 @@ export class UserParams {
     this.age = age;
   }
   GetIMT() {
-    let IMT = (this.weight / ((this.height / 100)*(this.height / 100)));
+    let IMT = this.weight / ((this.height / 100) * (this.height / 100));
     this.IMT = IMT;
     return IMT;
   }
@@ -19,19 +19,19 @@ export class UserParams {
     this.params = [this.deltaAge, this.deltaIMT];
     return this.params;
   }
-  GetProgram(){
+  GetProgram() {
     let imtQ = 0;
     let ageQ = 0;
-    for(let i = 6; i > 0; i --){
-      if(this.params[0] >= lineDlAge[i]){
-      }else{
+    for (let i = 6; i > 0; i--) {
+      if (this.params[0] >= lineDlAge[i]) {
+      } else {
         ageQ = i;
       }
     }
-    for(let i = 6; i > 0; i --){
-      if(this.params[1] >= lineDlIMT[i]){
-      }else{
-        imtQ = i-1;
+    for (let i = 6; i > 0; i--) {
+      if (this.params[1] >= lineDlIMT[i]) {
+      } else {
+        imtQ = i - 1;
       }
     }
     this.trainPlace = [ageQ, imtQ];
