@@ -157,10 +157,16 @@ function getMedium() {
   return medium;
 }
 const picturesMass = ['./images/gymnastics.png', './images/power.png', './images/food.png']
+function deleteCard(cardNumb){
+  document.getElementsByClassName(`additinalsCreated`)[cardNumb].remove()
+
+}
 function createTaskCard(task){
   let place = document.getElementsByClassName('additionals')[task.number];
   let elem = document.createElement("div");
   elem.classList.add("additinalsCreated");
+  elem.classList.add(task.number)
+  // console.log('builder',task)
   place.append(elem);
   place = elem;
   elem = document.createElement("div");

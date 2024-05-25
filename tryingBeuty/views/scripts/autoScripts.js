@@ -10,5 +10,6 @@ for(let i = 0; i < 3; i++){
     console.log(tasks[user.trainNum][0][i][0])
     createTaskCard(tasks[user.trainNum][0][i][0])
 }
-// }
 
+// }
+// deleteCard(0)

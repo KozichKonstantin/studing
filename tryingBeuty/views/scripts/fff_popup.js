@@ -6,12 +6,18 @@ const shadow_pop = document.getElementsByClassName("shadow_pop");
 for (let i = 0; i < btn_pop.length; i++) {
   btn_pop[i].addEventListener("click", () => {
     open();
+    form(i)
   });
 }
 function open() {
   popup[0].classList.add("pop_active");
   shadow_pop[0].classList.add("shadow_pop_active");
   document.getElementsByTagName("body")[0].style.overflow = "hidden";
+}
+function form(number){
+  let field = document.getElementsByClassName("description")[0];
+  let text = tasks[user.trainNum][0][number][0].description;
+  field.textContent = text
 }
 
 document
