@@ -11,11 +11,11 @@ var jsonParser = bodyParser.json();
 app.use(express.static(`${__dirname}/views`));
 // import connection from './connection.js';
 const connect = mysql.createConnection({
-        host : "localhost",
-        database : "fitnes",
-        user : "siteFindigBase",
-        password : "humansedrexstep",
-        port : "3306"
+  host: "localhost",
+  database: "fitnes",
+  user: "siteFindigBase",
+  password: "humansedrexstep",
+  port: "3306",
 });
 app.listen(Port, (error) => {
   error
@@ -39,8 +39,8 @@ app.get("/userPage/login", (req, res) => {
   res.render("login");
 });
 app.get("/regPage", (req, res) => {
-    res.render("regPage")
-})
+  res.render("regPage");
+});
 app.post("/userPage/login", urlencondedParcer, (req, res) => {
   res.end;
 });

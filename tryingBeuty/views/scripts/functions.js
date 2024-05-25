@@ -148,3 +148,42 @@ function cleanCollumns() {
   colls.forEach((coll) => coll.remove());
   dates.style.display = "none";
 }
+function getMedium() {
+  let summ = 0;
+  for(let i = 0; i < objMass.length; i++){
+    summ += objMass[i]._weight;
+  }
+  let medium = summ / objMass.length
+  return medium;
+}
+const picturesMass = ['./images/gymnastics.png', './images/power.png', './images/food.png']
+function createTaskCard(task){
+  let place = document.getElementsByClassName('additionals')[task.number];
+  let elem = document.createElement("div");
+  elem.classList.add("additinalsCreated");
+  place.append(elem);
+  place = elem;
+  elem = document.createElement("div");
+  elem.classList.add("sportPicture");
+  place.append(elem);
+  let nplace = elem;
+  elem = document.createElement("img");
+  elem.src = picturesMass[0];
+  nplace.append(elem);
+  elem = document.createElement("div");
+  elem.classList.add("sportDescription");
+  place.append(elem);
+  place = elem;
+  elem = document.createElement("input");
+  elem.type = "button";
+  elem.classList.add("taskText");
+  elem.classList.add("top")
+  elem.value = task.name;
+  place.append(elem);
+  elem = document.createElement("input");
+  elem.type = "button";
+  elem.classList.add("taskText");
+  elem.classList.add("bot")
+  elem.value = task.xp;
+  place.append(elem);
+}

@@ -48,6 +48,14 @@
   background-color: var(--innerFirst-bg-color);
   border-radius: 70px;
 }
+.additinalsCreated {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--innerFirst-bg-color); */
+  border-radius: 70px;
+}
 .sportPicture {
   display: flex;
   align-items: center;
