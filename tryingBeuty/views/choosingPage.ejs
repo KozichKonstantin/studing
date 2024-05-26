@@ -21,24 +21,18 @@
         <div class="mainContent">
           <div class="glassPlates">
             <div class="username">
-              <h2>Registration</h2>
+              <h2>Registration or Authorization</h2>
             </div>
             <div class="info">
-              <form
-                class="infoContent"
-                method="post"
-                action="/login/loginSucces"
-              >
-                <div class="usersInfo">
-                  <p>Username</p>
-                  <input name="username" type="text" />
-                </div>
-                <div class="usersInfo">
-                    <p>Password</p>
-                    <input name="password" type="password" />
-                </div>
-                <input type="submit" class="submit" value="Submit" />
-              </form>
+              <div class="infoContent">
+                
+                <a href="/loginPage">
+                    <input type="button"class="redirect" value="I already have account"/>
+                </a>
+                <a href="/regPage">
+                    <input type="button" class="redirect" value="I'm a new user" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

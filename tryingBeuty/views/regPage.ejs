@@ -1,60 +1,56 @@
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title> 
-            fitness
-        </title>
-        <link rel="stylesheet" href="../globalStyles.css">
-        <link rel="stylesheet" href="../stylesReg.css">
-    </head>
-    <body>
-        <div class="content">
-            <header>
-                <div class="headContent">
-                    <div class="logo">
-                        <a href="/">
-                        <img src="../images/Fitness_logo_watchos.png">
-                        </a>
-                    </div>
-                </div>
-            </header>
-            <div class="main">
-                <div class="mainContent">
-                    <div class="glassPlates">
-                        <div class="username">
-                            <h2>Username</h2>
-                        </div>
-                        <div class="info">
-                            <div class="infoContent">
-                                <div class="usersInfo">
-                                    <p>Full name</p>
-                                    <input type="text">
-                                </div>
-                                <div class="usersInfo">
-                                    <p>Birth date</p>
-                                    <input type="text">
-                                </div>
-                                <div class="usersInfo">
-                                    <p>E-mail</p>
-                                    <input type="text">
-                                </div>
-                                <div class="usersInfo">
-                                    <p>Sex</p>
-                                    <input type="text">
-                                </div>
-                                <div class="usersInfo">
-                                    <p>Tall</p>
-                                    <input type="text">
-                                </div>
-                                <div >
-                                    <input type="button" class="submit" value="Submit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>fitness</title>
+    <link rel="stylesheet" href="../globalStyles.css" />
+    <link rel="stylesheet" href="../stylesReg.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <div class="headContent">
+          <div class="logo">
+            <a href="/">
+              <img src="../images/Fitness_logo_watchos.png" />
+            </a>
+          </div>
         </div>
-    </body>
+      </header>
+      <div class="main">
+        <div class="mainContent">
+          <div class="glassPlates">
+            <div class="username">
+              <h2>Registration</h2>
+            </div>
+            <div class="info">
+              <form
+                class="infoContent"
+                method="post"
+                action="/registrationPage/registrationSucces"
+              >
+                <div class="usersInfo">
+                  <p>Username</p>
+                  <input name="username" type="text" />
+                </div>
+                <div class="usersInfo">
+                  <p>Age</p>
+                  <input name="age" type="text" />
+                </div>
+                <div class="usersInfo">
+                  <p>Tall</p>
+                  <input name="tall" type="text" />
+                </div>
+                <div class="usersInfo">
+                    <p>Password</p>
+                    <input name="password" type="password" />
+                </div>
+                <input type="submit" class="submit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
