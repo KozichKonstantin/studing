@@ -22,6 +22,17 @@ class Collumn {
       console.error("unexpected number");
     }
   }
+  set IMT(IMT){
+    if (IMT > 0) {
+      this._IMT = IMT;
+    }
+    IMT < 0 ? (this._IMT = -IMT) : returnErr("setIMT");
+  }
+  get IMT(){
+    let tall = JSON.parse(localStorage.getItem('user')).tall;
+    this._IMT = this._weight / ((tall / 100) * (tall / 100))
+    return this._IMT
+  }
   get weight() {
     return this._weight;
   }

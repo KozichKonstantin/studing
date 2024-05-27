@@ -7,9 +7,9 @@ async function loginSave(url = "", data = {}) {
     },
   });
   const json = await response.json();
-  localStorage.setItem("login", json.username);
-  localStorage.setItem("tall", json.tall);
-  localStorage.setItem("Age", json.Age);
+  // localStorage.setItem("login", json.username);
+  // localStorage.setItem("tall", json.tall);
+  // localStorage.setItem("Age", json.Age);
   localStorage.setItem("user", JSON.stringify(json))
 }
 let obj = new Object();

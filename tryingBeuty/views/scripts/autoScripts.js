@@ -6,7 +6,24 @@ user.GetIMT();
 user.GetParams();
 user.GetProgram();
 console.log(user.params ,user.trainNum )
-
+function parceAll(jsonString){
+    let mass = [];
+    jsonString = JSON.parse(jsonString);
+    for(let i = 0; i < jsonString.length; i++){
+        mass.push(JSON.parse(jsonString[i]));
+        console.log(mass)
+    }
+    return mass;
+}
+function stringifyALL(massOfObj){
+    let mass = [];
+    for(let i = 0; i < massOfObj.length; i++){
+        mass.push(JSON.stringify(massOfObj[i]))
+    }
+    return JSON.stringify(mass)
+}
+let testMass = [ {text: '1', name: 2}, {text: '1', name: 2}, {text: '1', name: 2} ]
+console.log(JSON.parse(localStorage.getItem('user')).weightBase, 'user')
 for(let i = 0; i < 3; i++){
     console.log(tasks[user.trainNum][0][i][0])
     createTaskCard(tasks[user.trainNum][0][i][0])
@@ -16,4 +33,7 @@ if(localStorage.getItem('user') != undefined){
     document.getElementById('Username').textContent = user.username;
     document.getElementById('tall').value = user.tall;
     document.getElementById('Age').value = user.Age;
+    // objMass = JSON.parse(user.weightBase)
+    let elem = user.weightBase;
+    
 }

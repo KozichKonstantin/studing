@@ -116,11 +116,12 @@ app.post("/login/saveLogin", jsonParser, (req, res) => {
       obj.username = req.body.username;
       console.log(result[0])
       let id = result[0].id;
-      let selectData = `SELECT Age, tall FROM userinfo WHERE username = '${req.body.username}'`;
+      let selectData = `SELECT Age, tall, weightBase FROM userinfo WHERE username = '${req.body.username}'`;
       connection.query(selectData, (err, result)=>{
       console.log(result, 'new result')
       obj.Age = result[0].Age;
-      obj.tall = result[0].tall;  
+      obj.tall = result[0].tall;
+      obj.weightBase = result[0].weightBase;  
       console.log('obj', obj)
       res.send(JSON.stringify(obj));
     })   
@@ -132,3 +133,16 @@ app.post("/login/saveLogin", jsonParser, (req, res) => {
   }
   });
 });
+app.post("/saveWeight", jsonParser, (req, res)=>{
+  // const regExp = /\*|%|#|&|\$/g;
+  // console.log(phoneNumber.replace(regExp, ''))
+  console.log(req.body[1].replace('\\',''))
+  let sendWeight = `UPDATE userinfo SET weightBase = '${req.body[1].replace('\\','')}' WHERE username = '${req.body[0].username}'`
+  connection.query(sendWeight, (err, result)=>{
+    console.log(result, 'incertResult')
+    res.end;
+  })
+})
+app.post("/getWeight", jsonParser, (req, res)=>{
+
+})

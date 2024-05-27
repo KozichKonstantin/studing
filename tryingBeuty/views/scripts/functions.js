@@ -214,7 +214,7 @@ function createTaskCard(task){
   place.append(elem);
   let nplace = elem;
   elem = document.createElement("img");
-  elem.src = picturesMass[0];
+  elem.src = picturesMass[task.number];
   nplace.append(elem);
   elem = document.createElement("div");
   elem.classList.add("sportDescription");
