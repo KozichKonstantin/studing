@@ -46,13 +46,29 @@ document.getElementsByClassName('left')[0].addEventListener('click', ()=>{
     buidGraf();
     
 })
-document.getElementsByClassName('calculate')[0].addEventListener('click', ()=>{
-    
-    // console.log(objMass);
-    console.log(getMedium());
-})
+
 document.getElementsByClassName('right')[0].addEventListener('click', ()=>{
     grClass('rightGr');
+})
+document.getElementsByClassName('calculate')[0].addEventListener('click', ()=>{
+    if(localStorage.getItem('user') != undefined){
+    // console.log(objMass);
+        
+        console.log(getMedium());
+        let userInfo = JSON.parse(localStorage.getItem('user'));
+        console.log(userInfo)
+        let user = new UserParams(getMedium(), userInfo.tall, userInfo.Age)
+        user.GetIMT();
+        user.GetParams();
+        user.GetProgram();
+        console.log(user.params ,user.trainNum )
+        for(let i = 0; i < 3; i++){
+            deleteCard(i)
+            console.log(tasks[user.trainNum][0][i][0])
+            createTaskCard(tasks[user.trainNum][0][i][0])
+        }
+        let btn_pop = document.getElementsByClassName("top");
+    }
 })
 let botmass = document.getElementsByClassName('taskText bot');
 for(let i =0; i < 3; i++){

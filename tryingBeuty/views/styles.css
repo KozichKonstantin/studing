@@ -39,6 +39,8 @@
   width: 170px;
   border-radius: 10px;
   border: none;
+  font-size: 15px;
+  font-family: "Days";
 }
 .additionals {
   display: flex;
@@ -299,3 +301,4 @@ canvas {
 .submit:hover {
   background-color: rgb(255, 205, 237);
 }
+

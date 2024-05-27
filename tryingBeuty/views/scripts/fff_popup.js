@@ -1,7 +1,7 @@
 
 const popup = document.getElementsByClassName("popup");
 console.log(popup)
-const btn_pop = document.getElementsByClassName("top");
+let btn_pop = document.getElementsByClassName("top");
 const shadow_pop = document.getElementsByClassName("shadow_pop");
 for (let i = 0; i < btn_pop.length; i++) {
   btn_pop[i].addEventListener("click", () => {
