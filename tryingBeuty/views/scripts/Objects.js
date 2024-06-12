@@ -4,3 +4,5 @@ let currUser = {
     'sex' : '',
     'tall' : ''
 }
+let objMass = [];
+let allObjMass = [];

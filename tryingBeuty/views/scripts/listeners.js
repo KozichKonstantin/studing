@@ -1,5 +1,4 @@
-let objMass = [];
-let allObjMass = [];
+
 // import { UserParams } from "./algorithm.js";
 // import { addCollumn } from "./functions.js";
 document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
@@ -9,23 +8,26 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
         return console.error('cant add collumn');
     }
     let date = document.getElementsByClassName('addDate')[0].value;
-    let coll = new CollumnWithF();
-    coll.weight = (weight-1+1);
-    coll.date = date;
-    coll.number = collumns.length++;
-    addCollumn(coll.weight);
-    addDate(coll.date)
-    objMass.push(coll);
-    allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
-    addWeight(objMass.slice(-14).map((obj)=>obj.weight))
-    let stoper = 14;
-    deleteOld(collumns.length, stoper);
-    if(objMass.length == stoper){
-        objMass=objMass.slice(1);
-    }
-    editAll(objMass);
+    buildCollumn(weight, date, collumns)
     delCanvas();
     buidGraf();
+    // let coll = new CollumnWithF();
+    // coll.weight = (weight-1+1);
+    // coll.date = date;
+    // coll.number = collumns.length++;
+    // addCollumn(coll.weight);
+    // addDate(coll.date)
+    // objMass.push(coll);
+    // allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
+    // addWeight(objMass.slice(-14).map((obj)=>obj.weight))
+    // let stoper = 14;
+    // deleteOld(collumns.length, stoper);
+    // if(objMass.length == stoper){
+    //     objMass=objMass.slice(1);
+    // }
+    // editAll(objMass);
+    // delCanvas();
+    // buidGraf();
 })
 document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
     // let user1 = new UserParams(60, 180, 75);
@@ -70,6 +72,7 @@ document.getElementsByClassName('calculate')[0].addEventListener('click', ()=>{
         let btn_pop = document.getElementsByClassName("top");
     }
 })
+document.getElementsByClassName('')
 let botmass = document.getElementsByClassName('taskText bot');
 for(let i =0; i < 3; i++){
     botmass[i].addEventListener('mouseover', ()=>{

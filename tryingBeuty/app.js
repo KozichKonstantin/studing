@@ -136,8 +136,12 @@ app.post("/login/saveLogin", jsonParser, (req, res) => {
 app.post("/saveWeight", jsonParser, (req, res)=>{
   // const regExp = /\*|%|#|&|\$/g;
   // console.log(phoneNumber.replace(regExp, ''))
-  console.log(req.body[1].replace('\\',''))
-  let sendWeight = `UPDATE userinfo SET weightBase = '${req.body[1].replace('\\','')}' WHERE username = '${req.body[0].username}'`
+  // console.log(req.body[1].replace('\\',''))
+  console.log(req.body, 'reqbody')
+  let weightString = req.body[1].replace( /"{/g, "{")
+  weightString = weightString.replace(/}"/g, '}')
+  console.log('weightString', weightString)
+  let sendWeight = `UPDATE userinfo SET weightBase = '${weightString}' WHERE username = '${req.body[0].username}'`
   connection.query(sendWeight, (err, result)=>{
     console.log(result, 'incertResult')
     res.end;

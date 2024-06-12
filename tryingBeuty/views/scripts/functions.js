@@ -1,3 +1,24 @@
+function buildCollumn (weight, date, collumns){
+  let coll = new CollumnWithF();
+    coll.weight = (weight-1+1);
+    coll.date = `${date}`;
+    coll.number = collumns.length++;
+    console.log(coll)
+    addCollumn(coll.weight);
+    // console.log(date)
+    console.log(coll.date, 'coll.date');
+    addDate(coll.date);
+    objMass.push(coll);
+    allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
+    addWeight(objMass.slice(-14).map((obj)=>obj.weight))
+    let stoper = 14;
+    deleteOld(collumns.length, stoper);
+    if(objMass.length == stoper){
+        objMass=objMass.slice(1);
+    }
+    editAll(objMass);
+    
+}
 function addCollumn(weight) {
   const createdType = document.createElement("div");
   createdType.className = `column`;
@@ -11,6 +32,8 @@ function addCollumn(weight) {
 }
 
 function addDate(date) {
+  console.log(date, 'date in f')
+  // console.log(typeof(date), 'Type of Date')
   const createdDate = document.createElement("p");
   createdDate.className = `date`;
   createdDate.textContent = `${date}`;

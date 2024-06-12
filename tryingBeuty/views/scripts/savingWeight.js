@@ -3,7 +3,9 @@ function stringifyALL(massOfObj){
     for(let i = 0; i < massOfObj.length; i++){
         mass.push(JSON.stringify(massOfObj[i]))
     }
-    return JSON.stringify(mass)
+    mass = JSON.stringify(mass)
+    console.log('massive ', mass.replace(/\\/g, ''))
+    return mass.replace('\\','')
 }
 
 async function saveWeight(url = "", data = {}) {
@@ -17,12 +19,14 @@ async function saveWeight(url = "", data = {}) {
     const json = await response.json();
   }
   let obj = new Object();
-  document.getElementsByName('save')[0].addEventListener("click", () => {
+  document.getElementsByName('saveweight')[0].addEventListener("click", () => {
     // console.log("clicked save", stringifyALL(objMass));
-    console.log(parceAll(stringifyALL(objMass)), 'returned')
+    console.log('before', objMass)
+    // console.log(parceAll(stringifyALL(objMass)), 'returned')
     obj.username = JSON.parse(localStorage.getItem('user')).username;
     weights = stringifyALL(objMass); 
     // console.log(obj, 'obj');
-    saveWeight("/saveWeight", [obj, weights]);
+    console.log('weights', weights.replace(/\\/g, ''))
+    saveWeight("/saveWeight", [obj, weights.replace(/\\/g, '')]);
   });
   
