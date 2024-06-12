@@ -27,7 +27,7 @@ function stringifyALL(massOfObj){
 // let testMass = [ {text: '1', name: 2}, {text: '1', name: 2}, {text: '1', name: 2} ]
 // console.log(JSON.parse(localStorage.getItem('user')).weightBase, 'user')
 for(let i = 0; i < 3; i++){
-    console.log(tasks[user.trainNum][0][i][0])
+    // console.log(tasks[user.trainNum][0][i][0])
     createTaskCard(tasks[user.trainNum][0][i][0])
 }
 if(localStorage.getItem('user') != undefined){
@@ -40,10 +40,10 @@ if(localStorage.getItem('user') != undefined){
     // objMass = JSON.parse(user.weightBase)
     let elem = JSON.parse(user.weightBase);
     // console.log('weightBase saved', elem);
-    console.log(elem.length, 'lenght')
+    // console.log(elem.length, 'lenght')
     
     for(let i = 0; i < elem.length; i++){
-        console.log('worked')
+        // console.log('worked')
         let collumns = document.getElementsByClassName('column');
         buildCollumn(elem[i]._weight, 'zzzzz'+elem[i]._date, collumns)
     }

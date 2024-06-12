@@ -1,4 +1,3 @@
-//import { UserParams } from "./algotithm.js";
 const express = require("express");
 const http = require("http");
 const fs = require("fs");
@@ -9,7 +8,6 @@ const bodyParser = require("body-parser");
 const urlencondedParcer = express.urlencoded({ extended: false });
 var jsonParser = bodyParser.json();
 app.use(express.static(`${__dirname}/views`));
-// import connection from './connection.js';
 const connection = mysql.createConnection({
   host: "localhost",
   database: "fitnesdb",
@@ -90,46 +88,42 @@ app.post("/login/loginSucces", urlencondedParcer, (req, res) => {
       if(result[0] == undefined || result[0] == null){
         res.render("login"); 
       }else{
-      // console.log(typeof result[0].password);
       if (result[0].password == `${req.body.password}`) {
         res.redirect("/");
         res.end()
       } else {
-        res.render("login"); 
-        // res.end();
+        res.render("login");
       }
     }
     }
-    // console.log("/////////", result[0]);
 });
 });
 app.post("/login/saveLogin", jsonParser, (req, res) => {
   let selectMore = `SELECT password, id FROM user WHERE username = '${req.body.username}'`;
   connection.query(selectMore, (err, result) => {
     if (result[0].password == undefined ){
-      console.log('zero')
       res.end()
     }else{
-    console.log("its login res", req.body);
+    // console.log("its login res", req.body);
     if (result[0].password == req.body.password) {
       let obj = new Object();
       obj.username = req.body.username;
-      console.log(result[0])
+      // console.log(result[0])
       let id = result[0].id;
-      let selectData = `SELECT Age, tall, weightBase FROM userinfo WHERE username = '${req.body.username}'`;
+      let selectData = `SELECT Age, tall, weightBase, username FROM userinfo WHERE username = '${req.body.username}'`;
       connection.query(selectData, (err, result)=>{
-      console.log(result, 'new result')
+      // console.log(result, 'new result')
       obj.Age = result[0].Age;
       obj.tall = result[0].tall;
       obj.weightBase = result[0].weightBase;  
-      console.log('obj', obj)
+      obj.username = result[0].username;
+      // console.log('obj Savelogin', obj)
       res.send(JSON.stringify(obj));
     })   
     } else {
       console.log("error", result);
       res.end;
     }
-    
   }
   });
 });
@@ -137,16 +131,27 @@ app.post("/saveWeight", jsonParser, (req, res)=>{
   // const regExp = /\*|%|#|&|\$/g;
   // console.log(phoneNumber.replace(regExp, ''))
   // console.log(req.body[1].replace('\\',''))
-  console.log(req.body, 'reqbody')
+  // console.log(req.body, 'reqbody')
   let weightString = req.body[1].replace( /"{/g, "{")
   weightString = weightString.replace(/}"/g, '}')
-  console.log('weightString', weightString)
+  // console.log('weightString', weightString)
   let sendWeight = `UPDATE userinfo SET weightBase = '${weightString}' WHERE username = '${req.body[0].username}'`
   connection.query(sendWeight, (err, result)=>{
-    console.log(result, 'incertResult')
+    // console.log(result, 'incertResult')
     res.end;
   })
 })
 app.post("/getWeight", jsonParser, (req, res)=>{
-
+  // console.log(req.body, 'req.body');
+  let obj = new Object();
+  let selectData = `SELECT Age, tall, weightBase, username FROM userinfo WHERE username = '${req.body.username}'`;
+  connection.query(selectData, (err, result)=>{
+  console.log(result, 'new result');
+  obj.Age = result[0].Age;
+  obj.tall = result[0].tall;
+  obj.weightBase = result[0].weightBase;  
+  obj.username = result[0].username;
+  // console.log('obj', obj)
+  res.send(JSON.stringify(obj));
+}) 
 })

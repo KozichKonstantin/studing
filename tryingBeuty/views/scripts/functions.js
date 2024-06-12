@@ -3,10 +3,10 @@ function buildCollumn (weight, date, collumns){
     coll.weight = (weight-1+1);
     coll.date = `${date}`;
     coll.number = collumns.length++;
-    console.log(coll)
+    // console.log(coll)
     addCollumn(coll.weight);
     // console.log(date)
-    console.log(coll.date, 'coll.date');
+    // console.log(coll.date, 'coll.date');
     addDate(coll.date);
     objMass.push(coll);
     allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
@@ -32,7 +32,7 @@ function addCollumn(weight) {
 }
 
 function addDate(date) {
-  console.log(date, 'date in f')
+  // console.log(date, 'date in f')
   // console.log(typeof(date), 'Type of Date')
   const createdDate = document.createElement("p");
   createdDate.className = `date`;
@@ -142,7 +142,6 @@ function graphClass(action) {
     ? (button.style.pointerEvents = "none")
     : allButtons.forEach(
         (arr) => (arr.style.pointerEvents = "auto"),
-        console.log("koko")
       );
 }
 

@@ -9,25 +9,12 @@ document.getElementsByClassName('submit')[0].addEventListener('click', ()=>{
     }
     let date = document.getElementsByClassName('addDate')[0].value;
     buildCollumn(weight, date, collumns)
+    obj.username = JSON.parse(localStorage.getItem('user')).username;
+    weights = stringifyALL(objMass);
+    saveWeight("/saveWeight", [obj, weights.replace(/\\/g, '')]);
     delCanvas();
-    buidGraf();
-    // let coll = new CollumnWithF();
-    // coll.weight = (weight-1+1);
-    // coll.date = date;
-    // coll.number = collumns.length++;
-    // addCollumn(coll.weight);
-    // addDate(coll.date)
-    // objMass.push(coll);
-    // allObjMass.push(coll); ///массив включающий в себя все колонки, даже не отображающиеся
-    // addWeight(objMass.slice(-14).map((obj)=>obj.weight))
-    // let stoper = 14;
-    // deleteOld(collumns.length, stoper);
-    // if(objMass.length == stoper){
-    //     objMass=objMass.slice(1);
-    // }
-    // editAll(objMass);
-    // delCanvas();
-    // buidGraf();
+    try{buidGraf()}catch{Error}
+    
 })
 document.getElementsByClassName('logo')[0].addEventListener('click', ()=>{
     // let user1 = new UserParams(60, 180, 75);
@@ -58,15 +45,15 @@ document.getElementsByClassName('calculate')[0].addEventListener('click', ()=>{
         
         console.log(getMedium());
         let userInfo = JSON.parse(localStorage.getItem('user'));
-        console.log(userInfo)
+        // console.log(userInfo)
         let user = new UserParams(getMedium(), userInfo.tall, userInfo.Age)
         user.GetIMT();
         user.GetParams();
         user.GetProgram();
-        console.log(user.params ,user.trainNum )
+        // console.log(user.params ,user.trainNum )
         for(let i = 0; i < 3; i++){
             deleteCard(i)
-            console.log(tasks[user.trainNum][0][i][0])
+            // console.log(tasks[user.trainNum][0][i][0])
             createTaskCard(tasks[user.trainNum][0][i][0])
         }
         let btn_pop = document.getElementsByClassName("top");

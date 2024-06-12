@@ -12,7 +12,7 @@ function create_canv(place) {
 }
 
 function create_graph(canvas) {
-  console.log('allObjMass', allObjMass)
+  // console.log('allObjMass', allObjMass)
   let colorLines = "rgb(251, 148, 148)";
   let colorFill = "rgb(251, 148, 148, 0.3)";
   let colorNums = "rgb(0,0,0)";
