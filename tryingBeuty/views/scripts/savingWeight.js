@@ -8,6 +8,7 @@ function stringifyALL(massOfObj){
 }
 
 async function saveWeight(url = "", data = {}) {
+
     const response = await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
