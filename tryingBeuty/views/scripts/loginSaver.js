@@ -14,4 +14,5 @@ document.querySelector(".subButton").addEventListener("click", () => {
   obj.username = document.getElementsByName("username")[0].value;
   obj.password = document.getElementsByName("password")[0].value;
   loginSave("/login/saveLogin", obj);
+  console.log(obj, 'save login')
 });

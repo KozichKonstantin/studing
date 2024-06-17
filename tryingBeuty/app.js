@@ -101,7 +101,10 @@ app.post("/login/loginSucces", urlencondedParcer, (req, res) => {
 app.post("/login/saveLogin", jsonParser, (req, res) => {
   let selectMore = `SELECT password, id FROM user WHERE username = '${req.body.username}'`;
   connection.query(selectMore, (err, result) => {
-    if (result.length == 1 || result.length == 0 || result.length == undefined){
+    console.log('login', req.body.username)
+    console.log(req.body, 'body')
+    console.log(result, 'result')
+    if ( result.length == 0 || result.length == undefined){
       res.render('login')
       console.log('huyovy login')
       res.end();

@@ -122,11 +122,6 @@
 }
 .bot_active{
   transition: 0.5s;
-  /***
-
-  *
-  *
-  /* strange thing */
 }
 .statsPlate {
   display: flex;
@@ -305,10 +300,10 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 70px;
   height: 50px;
   margin-left: 20px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: 3px solid var(--innerFirst-bg-color);
   background-color: var(--main-intaractive-color);
   font-family: "Days";

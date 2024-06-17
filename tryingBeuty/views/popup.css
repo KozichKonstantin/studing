@@ -109,7 +109,8 @@
 .btn_submit{
     height: 50px;
     width: 90px;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-block-start: auto;
     border-radius: 15px;
     background-color: var(--task-color);
     font-family: 'Days';

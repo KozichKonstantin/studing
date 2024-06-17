@@ -1,6 +1,6 @@
 
 const popup = document.getElementsByClassName("popup");
-console.log(popup)
+// console.log(popup)
 let btn_pop = document.getElementsByClassName("top");
 const shadow_pop = document.getElementsByClassName("shadow_pop");
 for (let i = 0; i < btn_pop.length; i++) {
